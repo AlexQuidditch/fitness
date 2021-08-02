@@ -1,0 +1,79 @@
+@import '../variables';
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  z-index: 999;
+
+  padding: 50px;
+
+  background-color: transparent;
+}
+
+.logo {
+  &__link {
+    font-size: 0;
+  }
+}
+
+.menu-container {
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.header-menu {
+  display: flex;
+
+  &__item {
+    height: 100%;
+    &:first-child &-link {
+      padding-left: 50px;
+    }
+    &:last-child &-link {
+      padding-right: 50px;
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    padding: 0 25px;
+    height: 50px;
+
+    align-items: center;
+    background-color: $color-accent;
+
+    font-family: 'Bebas Neue Bold', 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-size: 25px;
+    line-height: 1;
+
+    text-transform: uppercase;
+
+    color: $color-white;
+
+    &._vertical {
+      position: fixed;
+      top: 50px;
+      right: 0;
+      transform-origin: left top;
+      transform: rotate(90deg) translate(0, -192px)
+    }
+  }
+}
+
+.header-avatar {
+  padding: 5px;
+  font-size: 0;
+  background-color: $color-white;
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+}

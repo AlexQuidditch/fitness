@@ -1,0 +1,57 @@
+{{#with footer}}
+<footer
+  id="footer"
+  class="footer"
+>
+  {{clientLinks}}
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <img
+          src="/src/images/logo_white.svg"
+          alt=""
+          class="footer-logo"
+        >
+        <div class="row">
+          <div class="col-1">
+            <img
+              src="/src/images/inst.svg"
+              alt=""
+            >
+          </div>
+          <div class="col-1">
+            <img
+              src="/src/images/fb.svg"
+              alt=""
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-1"></div>
+      <div class="col-4">
+        <ul class="footer-links">
+          {{#each clientLinks}}
+          <li class="footer-link">
+            <a href="{{this.link}}">{{this.text}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul class="footer-links">
+          {{#each serviceLinks}}
+          <li class="footer-link">
+            <a href="{{this.link}}">{{this.text}}</a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="row">
+      <div class="col-6 footer__message _copy-right">{{copyRight}}</div>
+      <div class="col-6 footer__message _address">{{address}}</div>
+    </div>
+  </div>
+</footer>
+{{/with}}

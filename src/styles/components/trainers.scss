@@ -1,0 +1,100 @@
+@import '../variables';
+
+.trainers {
+  padding: 100px 0;
+
+  background-color: $color-gray;
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-size: 100px;
+    line-height: 1;
+
+    text-align: center;
+
+    color: $color-black;
+
+    &._accent {
+      color: $color-accent;
+    }
+  }
+
+  .trainer-item {
+    position: relative;
+
+    margin-top: 150px;
+    padding-top: 150px;
+
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 30px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-accent;
+
+    &__avatar {
+      position: absolute;
+      top: -150px;
+      width: 100%;
+      padding: 0 30px;
+    }
+
+    &__name {
+      margin-bottom: 20px;
+
+      font-family: $font-family-bold;
+      font-size: 50px;
+      line-height: 50px;
+
+      text-align: center;
+      color: $color-black;
+    }
+
+    &__skills {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__skills-item {
+      padding: 7px 20px;
+      margin-bottom: 10px;
+
+      font-family: $font-family-regular;
+      font-size: 20px;
+      line-height: 1;
+
+      text-align: center;
+      text-transform: uppercase;
+
+      color: $color-black;
+      background-color: $color-white;
+
+      border-radius: 10px;
+
+      &:last-child {
+        margin-bottom: 35px;
+      }
+    }
+
+    &__schedule {
+      font-family: $font-family-bold;
+      font-size: 30px;
+      line-height: 1;
+
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration-line: underline;
+
+      color: $color-white;
+    }
+  }
+}

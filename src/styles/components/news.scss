@@ -1,0 +1,50 @@
+@import '../variables';
+
+.news {
+  padding: 100px 0;
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-size: 100px;
+    line-height: 1;
+
+    text-align: center;
+
+    color: $color-black;
+
+    &._accent {
+      color: $color-accent;
+    }
+  }
+
+  .news-list {
+    margin-bottom: 70px;
+  }
+
+  .news-item {
+    font-family: $font-family-light;
+    font-size: 50px;
+    line-height: 60px;
+    color: $color-accent;
+
+
+    &:nth-child(odd) {
+      color: $color-black;
+    }
+  }
+
+  .col-6 {
+    img:first-child {
+      margin-bottom: 80px;
+    }
+  }
+
+  .image-list {
+    img {
+      width: 100%;
+    }
+  }
+}

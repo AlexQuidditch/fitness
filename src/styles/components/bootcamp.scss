@@ -1,0 +1,97 @@
+@import '../variables';
+
+.bootcamp {
+  height: 100vh;
+  padding-top: 30vh;
+  padding-bottom: 80px;
+
+  background-image: url('/src/images/bootcamp_girl.png');
+  background-repeat: no-repeat;
+  background-position: 600px center;
+
+  &__title {
+    margin-bottom: 60px;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 200px;
+
+    line-height: 180px;
+    white-space: pre-line;
+
+    color: $color-black;
+  }
+
+  &__nearest-training {
+    position: relative;
+    display: inline-block;
+
+    width: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 80px;
+
+    margin-bottom: 65px;
+
+    font-family: $font-family-regular;
+    font-size: 30px;
+    line-height: 1;
+
+    color: $color-black;
+    background-color: $color-accent;
+
+    &::before {
+      position: absolute;
+
+      top: 0;
+      left: -1000px;
+
+      width: 1000px;
+      height: 54px;
+
+      content: '';
+      background-color: inherit;
+    }
+
+    span {
+      margin-left: 5px;
+      font-family: $font-family-regular;
+      color: $color-white;
+    }
+  }
+
+  &__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background: $color-accent;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    appearance: none;
+    border: none;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+
+    color: $color-white;
+  }
+}
+
+.sub-message {
+  &__item {
+    font-family: $font-family-thin;
+    font-style: normal;
+    font-size: 50px;
+    line-height: 1;
+
+    color: $color-black;
+  }
+}

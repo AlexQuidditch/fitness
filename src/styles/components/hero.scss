@@ -1,0 +1,63 @@
+@import '../variables';
+
+.hero {
+  height: 100vh;
+
+  background-image: url('/src/images/hero_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .overlay {
+    padding-top: 30vh;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0.02%, rgba(0, 0, 0, 0) 99.98%);
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 200px;
+
+    line-height: 180px;
+    white-space: pre-line;
+
+    color: $color-white;
+  }
+
+  &__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 260px;
+    height: 100%;
+
+    background: $color-accent;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    appearance: none;
+    border: none;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+
+    color: $color-white;
+  }
+
+  .sub-message {
+    &__item {
+      font-family: $font-family-bold;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 1;
+
+      color: $color-accent;
+    }
+  }
+}

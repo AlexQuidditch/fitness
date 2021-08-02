@@ -1,0 +1,67 @@
+@import './grid';
+@import './reset';
+@import './scrollbar';
+@import './variables';
+
+/* ----- Everything ----- */
+* {
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+/* ----- General ----- */
+html {
+  overflow-x: hidden;
+  font-size: 14px;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  height: auto;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  height: 100%;
+
+  &._fluid {
+    max-width: $container-wide-width;
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  @include make-row;
+
+  &._double-gap {
+    gap: $grid-gutter-width * 2;
+  }
+}
+
+.masonry {
+  @include make-masonry;
+}
+
+@import './components/header';
+@import './components/hero';
+@import './components/bootcamp';
+@import './components/functional';
+@import './components/fightings';
+@import './components/body-mind';
+@import './components/personal';
+@import './components/trainers';
+@import './components/news';
+@import './components/footer';

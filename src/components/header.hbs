@@ -1,0 +1,40 @@
+{{#with header}}
+<header
+  id="header"
+  class="header"
+>
+  <div class="container _fluid">
+    <a
+      href=""
+      class="logo__link"
+    >
+      <img
+        src="/src/images/logo.svg"
+        alt=""
+        class="logo__image"
+      >
+    </a>
+  </div>
+
+  <div class="menu-container">
+    <ul class="header-menu">
+      {{#each menu}}
+      <li class="header-menu__item">
+        <a
+          href="{{this.link}}{{this.anchor}}"
+          class="header-menu__item-link"
+        >{{this.text}}</a>
+      </li>
+      {{/each}}
+    </ul>
+    <div class="header-avatar">
+      <img
+        src="/src/images/header_avatar.png"
+        class="header-avatar__image"
+      >
+    </div>
+    <a href="" class="header-menu__item-link _vertical">Личный кабинет</a>
+  </div>
+
+</header>
+{{/with}}

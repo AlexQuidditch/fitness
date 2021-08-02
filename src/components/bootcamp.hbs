@@ -1,0 +1,32 @@
+{{#with bootcamp}}
+<section
+  id="bootcamp"
+  class="bootcamp"
+>
+  <div class="overlay">
+    <div class="container">
+      <h1 class="bootcamp__title">{{ title }}</h1>
+
+      <div class="bootcamp__nearest-training">
+        {{nearestTraining}} <span id="nearest-bootcamp-value"></span>
+      </div>
+
+      <div class="row">
+        <div class="col-9">
+          <ul class="sub-messages">
+            {{#each subMessageList}}
+            <li class="sub-message__item">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="col-3">
+          <a
+            href=""
+            class="bootcamp__action-button"
+          >ЗАКАЗАТЬ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/with}}

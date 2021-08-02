@@ -1,0 +1,62 @@
+/* ----- Creates a wrapper for a series of columns ----- */
+@use "sass:math";
+
+@import './variables';
+
+@mixin make-row {
+  display: grid;
+  gap: $grid-gutter-width;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+@mixin make-masonry {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    grid-column: span #{$i};
+    position: relative;
+  }
+}
+
+@media (max-width: $screen-lg-min) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      grid-column: span #{$i};
+      position: relative;
+    }
+  }
+
+  .col-md-hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: $screen-md-min) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      grid-column: span #{$i};
+      position: relative;
+    }
+  }
+
+  .col-sm-hide {
+    display: none !important;
+  }
+}
+
+@media (max-width: $screen-sm-min) {
+  @for $i from 1 through 12 {
+    .col-xs-#{$i} {
+      grid-column: span #{$i};
+      position: relative;
+    }
+  }
+
+  .col-xs-hide {
+    display: none !important;
+  }
+}

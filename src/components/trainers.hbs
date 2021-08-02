@@ -1,0 +1,34 @@
+{{#with trainers}}
+<section
+  id="trainers"
+  class="trainers"
+>
+  <div class="container">
+    <h2 class="trainers__title">
+      Тренеры <span class="trainers__title _accent">секции</span>
+    </h2>
+
+    <ul class="trainers-list row">
+      {{#each list}}
+      <li class="col-4 trainer-item">
+        <img
+          src="{{this.photo}}"
+          alt="{{this.name}}"
+          class="trainer-item__avatar"
+        >
+        <h5 class="trainer-item__name">{{this.name}}</h5>
+        <ul class="trainer-item__skills">
+          {{#each this.skills}}
+          <li class="trainer-item__skills-item">{{this}}</li>
+          {{/each}}
+        </ul>
+        <a
+          href="{{this.schedule}}"
+          class="trainer-item__schedule"
+        >РАСПИСАНИЕ →</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

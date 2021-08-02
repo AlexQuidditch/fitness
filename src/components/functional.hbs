@@ -1,0 +1,35 @@
+{{#with functional}}
+<section
+  id="functional"
+  class="functional"
+>
+  <div class="overlay">
+    <div class="container">
+      <h1 class="functional__title">{{ title }}</h1>
+
+      <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4 functional__nearest-training">
+          {{nearestTraining}} <span id="nearest-functional-value"></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-9">
+          <ul class="sub-messages">
+            {{#each subMessageList}}
+            <li class="sub-message__item">{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="col-3">
+          <a
+            href=""
+            class="functional__action-button"
+          >подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{/with}}

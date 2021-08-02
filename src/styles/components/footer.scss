@@ -1,0 +1,44 @@
+@import '../variables';
+
+.footer {
+  padding: 100px 0 0 0;
+  background-color: $color-black;
+
+  &__message {
+    margin: 30px 0;
+
+    font-family: $font-family-bold;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba($color-white, 0.5);
+
+    &._address {
+      text-align: right;
+    }
+  }
+}
+
+.footer-logo {
+  margin-bottom: 50px;
+}
+
+.footer-links {
+}
+
+.footer-link {
+  display: block;
+  margin-bottom: 10px;
+  text-align: right;
+  a {
+    font-family: $font-family-regular;
+    font-size: 20px;
+    line-height: 1;
+    color: $color-white;
+  }
+}
+
+.footer-divider {
+  margin-top: 80px;
+  margin-bottom: 0;
+  opacity: 0.2;
+}
