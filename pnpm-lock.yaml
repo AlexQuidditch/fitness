@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   autoprefixer: ^10.3.1
+  hamburgers: ^1.1.3
   normalize.css: ^8.0.1
   postcss-viewport-height-correction: ^1.1.1
   sass: ^1.37.0
@@ -11,6 +12,7 @@ specifiers:
   vite-plugin-handlebars: ^1.6.0
 
 dependencies:
+  hamburgers: 1.1.3
   normalize.css: 8.0.1
   swiper: 6.8.0
 
@@ -174,6 +176,10 @@ packages:
     dependencies:
       is-glob: 4.0.1
     dev: true
+
+  /hamburgers/1.1.3:
+    resolution: {integrity: sha512-qpfnJwZq6ATAGJEriwuyfVNgT++GG+o+3bBfPYF7F3WY452cYKbaYGUuqwhp+3kHLI6CL4VIBfj8bfbp90Lp1A==}
+    dev: false
 
   /handlebars/4.7.7:
     resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==}
