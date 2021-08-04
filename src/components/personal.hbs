@@ -1,29 +1,29 @@
 {{#with personal}}
 <section
   id="personal"
-  class="personal"
+  class="personal section"
 >
   <div class="overlay">
     <div class="container">
-      <h1 class="personal__title">{{ title }}</h1>
+      <h2 class="personal__title section__heading">{{ title }}</h2>
 
-      <div class="personal__nearest-training">
-        {{nearestTraining}} <span id="nearest-personal-value"></span>
-      </div>
+      <div class="row _align-end">
+        <div class="column _sm-reverse col-9 col-sm-8 _align-start">
+          <div class="section__nearest-training _left">
+            {{nearestTraining}} <span id="nearest-personal-value"></span>
+          </div>
 
-      <div class="row">
-        <div class="col-9">
-          <ul class="sub-messages">
+          <ul class="sub-messages section__sub-messages">
             {{#each subMessageList}}
-            <li class="sub-message__item">{{this}}</li>
+            <li class="sub-messages__item">{{this}}</li>
             {{/each}}
           </ul>
         </div>
-        <div class="col-3">
-          <a
-            href=""
-            class="personal__action-button"
-          >ЗАПИСАТЬСЯ</a>
+        <div class="col-3 col-sm-4">
+          <button
+            id="personal-action"
+            class="personal__action-button section__action-button"
+          >ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>

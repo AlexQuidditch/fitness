@@ -33,9 +33,30 @@ function fillFightingsBootCampValue(value: string) {
   target.innerHTML = value
 }
 
+function fillPersonalBootCampValue(value: string) {
+  if (!app) { return value }
+  const target = app.querySelector('#nearest-personal-value')
+  if (!target) { return value }
+  target.innerHTML = value
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   fillNearestBootCampValue('Завтра')
   fillFunctionalBootCampValue('Сегодня')
   fillFightingsBootCampValue('Сегодня')
   fillNearestBodyMindValue('Сегодня')
+  fillPersonalBootCampValue('Сегодня')
+
+  const $el = document.getElementById('menu-button')
+  const $sidebarEl = document.getElementById('sidebar')
+
+  if (!$el) { return }
+
+  $el.addEventListener('click', e => {
+    e.preventDefault()
+    if (!$el || !$sidebarEl) { return }
+    $el.classList.toggle('is-active')
+    $sidebarEl.classList.toggle('_active')
+  })
 })

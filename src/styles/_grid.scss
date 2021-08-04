@@ -7,6 +7,19 @@
   display: grid;
   gap: $grid-gutter-width;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+
+  @media (max-width: $screen-sm-max) {
+    gap: math.div($grid-gutter-width, 2)
+  }
+
+  &._no-gap {
+    gap: 0;
+  }
+}
+
+@mixin make-column {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin make-masonry {
@@ -57,6 +70,12 @@
   }
 
   .col-xs-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .col-md-show {
     display: none !important;
   }
 }

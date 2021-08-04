@@ -1,29 +1,29 @@
 {{#with fightings}}
 <section
   id="fightings"
-  class="fightings"
+  class="fightings section"
 >
   <div class="overlay">
     <div class="container">
-      <h1 class="fightings__title">{{ title }}</h1>
+      <h2 class="fightings__title section__heading">{{ title }}</h2>
 
-      <div class="fightings__nearest-training">
-        {{nearestTraining}} <span id="nearest-fightings-value"></span>
-      </div>
+      <div class="row _align-end">
+        <div class="column _sm-reverse col-9 col-sm-8 _align-start">
+          <div class="section__nearest-training _left">
+            {{nearestTraining}} <span id="nearest-fightings-value">ЗАВТРА</span>
+          </div>
 
-      <div class="row">
-        <div class="col-9">
-          <ul class="sub-messages">
+          <ul class="sub-messages section__sub-messages">
             {{#each subMessageList}}
-            <li class="sub-message__item">{{this}}</li>
+            <li class="sub-messages__item">{{this}}</li>
             {{/each}}
           </ul>
         </div>
-        <div class="col-3">
-          <a
-            href=""
-            class="fightings__action-button"
-          >ПОДРОБНЕЕ</a>
+        <div class="col-3 col-sm-4">
+          <button
+            id="fightings-action"
+            class="fightings__action-button section__action-button"
+          >ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>

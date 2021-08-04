@@ -5,17 +5,20 @@
 >
   <div class="overlay">
     <div class="container _fluid">
-      <h1 class="hero__title">{{ title }}</h1>
+      <h1 class="hero__title section__heading">{{ title }}</h1>
       <div class="row">
-        <div class="col-4">
+        <div class="col-4 col-sm-12">
           <ul class="sub-messages">
             {{#each subMessageList}}
-            <li class="sub-message__item">{{this}}</li>
+            <li class="sub-messages__item">{{this}}</li>
             {{/each}}
           </ul>
         </div>
-        <div class="col-3">
-          <a href="" class="hero__action-button">ЗАКАЗАТЬ</a>
+        <div class="col-3 col-sm-6">
+          <button
+            id="hero-action"
+            class="hero__action-button"
+          >ЗАКАЗАТЬ</button>
         </div>
       </div>
     </div>

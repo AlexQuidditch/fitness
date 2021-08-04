@@ -25,6 +25,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   height: auto;
 }
 
@@ -36,6 +37,10 @@ body {
   &._fluid {
     max-width: $container-wide-width;
   }
+
+  @media (max-width: $screen-md-min) {
+    padding: 0 20px;
+  }
 }
 
 .overlay {
@@ -46,9 +51,45 @@ body {
 .row {
   @include make-row;
 
-  &._double-gap {
-    gap: $grid-gutter-width * 2;
+  &._reverse {
+    flex-direction: row-reverse;
   }
+
+  @media (max-width: $screen-md-min) {
+    &._sm-reverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.column {
+  @include make-column;
+
+  &._reverse {
+    flex-direction: column-reverse;
+  }
+
+  @media (max-width: $screen-md-min) {
+    &._sm-reverse {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+._align-start {
+  align-items: flex-start
+}
+
+._align-end {
+  align-items: flex-end
+}
+
+._justify-start {
+  justify-items: flex-start
+}
+
+._justify-end {
+  justify-items: flex-end
 }
 
 .masonry {
@@ -64,4 +105,8 @@ body {
 @import './components/personal';
 @import './components/trainers';
 @import './components/news';
+@import './components/maps';
 @import './components/footer';
+@import './components/sidebar';
+
+@import './shared';

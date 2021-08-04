@@ -1,13 +1,17 @@
 @import '../variables';
 
 .fightings {
-  height: 100vh;
-  padding-top: 15vh;
+  padding-top: 135px;
   padding-bottom: 80px;
 
   background-image: url('/src/images/fightings_mens.png');
   background-repeat: no-repeat;
-  background-position: 600px 15%;
+  background-position: 70% 15%;
+
+  @media (max-width: $screen-md-min) {
+    background-size: contain;
+    background-position: 70% top;
+  }
 
   &__title {
     margin-bottom: 60px;
@@ -15,12 +19,16 @@
     font-family: $font-family-bold;
     font-style: normal;
     font-weight: bold;
-    font-size: 200px;
+    font-size: em(200px);
 
     line-height: 180px;
     white-space: pre-line;
 
     color: $color-black;
+
+    @media (max-width: $screen-sm-max) {
+      font-size: $font-size-h2-xs;
+    }
   }
 
   &__nearest-training {
@@ -82,16 +90,5 @@
     font-size: 50px;
 
     color: $color-white;
-  }
-}
-
-.sub-message {
-  &__item {
-    font-family: $font-family-regular;
-    font-style: normal;
-    font-size: 50px;
-    line-height: 1;
-
-    color: $color-black;
   }
 }

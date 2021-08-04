@@ -1,14 +1,14 @@
 {{#with news}}
 <section
   id="news"
-  class="news"
+  class="news section"
 >
   <div class="container">
-    <h1 class="news__title">Новая <span class="news__title _accent">секция</span> на смоленке</h1>
+    <h2 class="news__title section__heading">Новая <span class="news__title _accent">секция</span> на смоленке</h2>
 
-    <ul class="news-list row _double-gap">
+    <ul class="news-list row">
       {{#each list}}
-      <li class="news-item col-6">
+      <li class="news-item col-6 col-sm-12">
         {{this}}
       </li>
       {{/each}}
@@ -16,7 +16,7 @@
   </div>
 
   <div class="container _fluid">
-    <div class="row _double-gap image-list">
+    <div class="row image-list">
       <div class="col-6">
         <img
           src="/src/images/Rectangle12.png"

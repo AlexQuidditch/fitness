@@ -1,8 +1,7 @@
 @import '../variables';
 
 .functional {
-  height: 100vh;
-  padding-top: 15vh;
+  padding-top: 135px;
   padding-bottom: 80px;
 
   background-image: url('/src/images/functional_man.png');
@@ -10,6 +9,11 @@
   background-position: 25% 15%;
 
   background-color: $color-gray;
+
+  @media (max-width: $screen-md-min) {
+    background-size: contain;
+    background-position: 50% top;
+  }
 
   &__title {
     margin-bottom: 60px;
@@ -86,16 +90,5 @@
     font-size: 50px;
 
     color: $color-white;
-  }
-
-  .sub-message {
-    &__item {
-      font-family: $font-family-regular;
-      font-style: normal;
-      font-size: 50px;
-      line-height: 1;
-
-      color: $color-black;
-    }
   }
 }

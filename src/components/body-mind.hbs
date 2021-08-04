@@ -1,32 +1,36 @@
 {{#with bodyMind}}
 <section
   id="body-mind"
-  class="body-mind"
+  class="body-mind section"
 >
   <div class="overlay">
     <div class="container">
-      <h1 class="body-mind__title">{{ title }}</h1>
+      <h2 class="body-mind__title section__heading">{{ title }}</h2>
 
-      <div class="row">
+      <div class="row col-sm-hide">
         <div class="col-8"></div>
-        <div class="col-4 body-mind__nearest-training">
+        <div class="col-4 section__nearest-training _right">
           {{nearestTraining}} <span id="nearest-body-mind-value"></span>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-9">
-          <ul class="sub-messages">
+      <div class="row _align-end">
+        <div class="column _sm-reverse col-9 col-sm-8 _align-start">
+          <div class="section__nearest-training _left col-md-show">
+            {{nearestTraining}} <span id="nearest-body-mind-value">ЗАВТРА</span>
+          </div>
+
+          <ul class="sub-messages section__sub-messages">
             {{#each subMessageList}}
-            <li class="sub-message__item">{{this}}</li>
+            <li class="sub-messages__item">{{this}}</li>
             {{/each}}
           </ul>
         </div>
-        <div class="col-3">
-          <a
-            href=""
-            class="body-mind__action-button"
-          >ЗАПИСАТЬСЯ</a>
+        <div class="col-3 col-sm-4">
+          <button
+            id="body-mind-action"
+            class="body-mind__action-button section__action-button"
+          >ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>

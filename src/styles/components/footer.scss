@@ -4,31 +4,61 @@
   padding: 100px 0 0 0;
   background-color: $color-black;
 
+  @media (max-width: $screen-sm-max) {
+    padding: 60px 0 0 0;
+  }
+
   &__message {
-    margin: 30px 0;
+    margin-bottom: 30px;
 
     font-family: $font-family-bold;
     font-size: 14px;
     line-height: 1;
     color: rgba($color-white, 0.5);
 
+    @media (max-width: $screen-sm-max) {
+      margin: 25px 0;
+      text-align: center;
+    }
+
     &._address {
       text-align: right;
+
+      @media (max-width: $screen-sm-max) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__first-row {
+    @media (max-width: $screen-sm-max) {
+      order: 3
     }
   }
 }
 
 .footer-logo {
-  margin-bottom: 50px;
+  width: 100%;
+  min-height: 32px;
+
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 34px;
+  }
 }
 
 .footer-links {
+  @media (max-width: $screen-sm-max) {
+    &._first .footer-link {
+      text-align: left;
+    }
+  }
 }
 
 .footer-link {
   display: block;
   margin-bottom: 10px;
   text-align: right;
+
   a {
     font-family: $font-family-regular;
     font-size: 20px;
@@ -38,7 +68,21 @@
 }
 
 .footer-divider {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 0;
   opacity: 0.2;
+  width: 100%;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
+
+  &._mobile {
+    display: none;
+
+    @media (max-width: $screen-sm-max) {
+      display: block;
+      margin: 0;
+    }
+  }
 }

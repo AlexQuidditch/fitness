@@ -1,15 +1,19 @@
 @import '../variables';
 
 .body-mind {
-  height: 100vh;
-  padding-top: 20vh;
+  padding-top: 205px;
   padding-bottom: 80px;
 
   background-image: url('/src/images/standing_girl.png');
   background-repeat: no-repeat;
-  background-position: 5% 10%;
+  background-position: 22.5% 10%;
 
   background-color: $color-gray;
+
+  @media (max-width: $screen-sm-max) {
+    background-size: contain;
+    background-position: -250% top;
+  }
 
   &__title {
     margin-bottom: 60px;
@@ -17,7 +21,7 @@
     font-family: $font-family-bold;
     font-style: normal;
     font-weight: bold;
-    font-size: 180px;
+    font-size: $font-size-h2;
 
     text-align: right;
 
@@ -25,43 +29,9 @@
     white-space: pre-line;
 
     color: $color-black;
-  }
 
-  &__nearest-training {
-    position: relative;
-    display: inline-block;
-
-    width: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-
-    margin-bottom: 65px;
-
-    text-align: right;
-
-    font-family: $font-family-regular;
-    font-size: 30px;
-    line-height: 1;
-
-    color: $color-black;
-    background-color: $color-accent;
-
-    &::after {
-      position: absolute;
-
-      top: 0;
-
-      width: 1000px;
-      height: 54px;
-
-      content: '';
-      background-color: inherit;
-    }
-
-    span {
-      margin-left: 5px;
-      font-family: $font-family-regular;
-      color: $color-white;
+    @media (max-width: $screen-sm-max) {
+      font-size: $font-size-h2-xs;
     }
   }
 
@@ -86,16 +56,5 @@
     font-size: 50px;
 
     color: $color-white;
-  }
-
-  .sub-message {
-    &__item {
-      font-family: $font-family-regular;
-      font-style: normal;
-      font-size: 50px;
-      line-height: 1;
-
-      color: $color-black;
-    }
   }
 }

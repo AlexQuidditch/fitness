@@ -1,7 +1,7 @@
 @import '../variables';
 
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   right: 0;
@@ -11,23 +11,40 @@
   padding: 50px;
 
   background-color: transparent;
+
+  @media (max-width: $screen-sm-max) {
+    padding: 20px 0;
+  }
 }
 
 .logo {
   &__link {
     font-size: 0;
   }
+  &__image {
+    @media (max-width: $screen-sm-max) {
+      width: 100px;
+    }
+  }
 }
 
 .menu-container {
   display: flex;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
 }
 
 .header-menu {
   display: flex;
+
+  @media (max-width: $screen-sm-max) {
+    display: none;
+  }
 
   &__item {
     height: 100%;
@@ -47,7 +64,7 @@
     align-items: center;
     background-color: $color-accent;
 
-    font-family: 'Bebas Neue Bold', 'Courier New', Courier, monospace;
+    font-family: $font-family-bold;
     font-style: normal;
     font-size: 25px;
     line-height: 1;

@@ -1,13 +1,18 @@
 @import '../variables';
 
 .personal {
-  height: 100vh;
-  padding-top: 17.5vh;
+  padding-top: 135px;
   padding-bottom: 80px;
 
   background-image: url('/src/images/personal_training.png');
   background-repeat: no-repeat;
-  background-position: 87.5% 10%;
+  background-position: 87.5% 0;
+
+  @media (max-width: $screen-sm-max) {
+    background-size: contain;
+    background-position: -50% top;
+    padding-bottom: 60px !important;
+  }
 
   &__title {
     margin-bottom: 60px;
@@ -82,16 +87,5 @@
     font-size: 50px;
 
     color: $color-white;
-  }
-}
-
-.sub-message {
-  &__item {
-    font-family: $font-family-regular;
-    font-style: normal;
-    font-size: 50px;
-    line-height: 1;
-
-    color: $color-black;
   }
 }

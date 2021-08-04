@@ -1,0 +1,28 @@
+{{#with header}}
+<button
+  id="menu-button"
+  type="button"
+  class="sidebar__button hamburger hamburger--spring"
+  aria-label="Menu"
+  aria-controls="navigation"
+>
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar__content">
+    <ul class="sidebar-menu">
+      {{#each menu}}
+      <li class="sidebar-menu__item">
+        <a
+          href="{{this.link}}{{this.anchor}}"
+          class="sidebar-menu__item-link"
+        >{{this.text}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</aside>
+{{/with}}

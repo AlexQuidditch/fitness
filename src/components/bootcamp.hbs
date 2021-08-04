@@ -1,29 +1,29 @@
 {{#with bootcamp}}
 <section
   id="bootcamp"
-  class="bootcamp"
+  class="bootcamp section"
 >
   <div class="overlay">
     <div class="container">
-      <h1 class="bootcamp__title">{{ title }}</h1>
+      <h2 class="bootcamp__title section__heading">{{ title }}</h2>
 
-      <div class="bootcamp__nearest-training">
-        {{nearestTraining}} <span id="nearest-bootcamp-value"></span>
-      </div>
+      <div class="row _align-end">
+        <div class="column _sm-reverse col-9 col-sm-8 _align-start">
+          <div class="section__nearest-training _left">
+            {{nearestTraining}} <span id="nearest-bootcamp-value"></span>
+          </div>
 
-      <div class="row">
-        <div class="col-9">
-          <ul class="sub-messages">
+          <ul class="sub-messages section__sub-messages">
             {{#each subMessageList}}
-            <li class="sub-message__item">{{this}}</li>
+            <li class="sub-messages__item">{{this}}</li>
             {{/each}}
           </ul>
         </div>
-        <div class="col-3">
-          <a
-            href=""
-            class="bootcamp__action-button"
-          >ЗАКАЗАТЬ</a>
+        <div class="col-3 col-sm-4">
+          <button
+            id="bootcamp-action"
+            class="bootcamp__action-button section__action-button"
+          >ЗАПИСАТЬСЯ</button>
         </div>
       </div>
     </div>

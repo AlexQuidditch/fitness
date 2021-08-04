@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @import '../variables';
 
 .news {
@@ -21,6 +23,7 @@
   }
 
   .news-list {
+    gap: $grid-gutter-width * 2;
     margin-bottom: 70px;
   }
 
@@ -29,7 +32,6 @@
     font-size: 50px;
     line-height: 60px;
     color: $color-accent;
-
 
     &:nth-child(odd) {
       color: $color-black;
@@ -43,8 +45,32 @@
   }
 
   .image-list {
+    gap: $grid-gutter-width * 2;
     img {
       width: 100%;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .news-list {
+      gap: math.div($grid-gutter-width, 2);
+      margin-bottom: 60px;
+    }
+
+    .image-list {
+      gap: math.div($grid-gutter-width, 2);
+    }
+
+    .col-6 {
+      img:first-child {
+        margin-bottom: 20px;
+      }
+    }
+
+    .news-item {
+      font-family: $font-family-regular;
+      font-size: 20px;
+      line-height: 30px;
     }
   }
 }
