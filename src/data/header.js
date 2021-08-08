@@ -2,7 +2,7 @@ export const header = {
   menu: [
     {
       text: 'Расписание',
-      link: '/schedule',
+      link: '/schedule.html',
       anchor: '',
     },
     {

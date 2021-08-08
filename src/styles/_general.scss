@@ -21,12 +21,19 @@ html {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+
+  &._no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 body {
   overflow-x: hidden;
   height: auto;
+
+  &._no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 .container {
@@ -36,6 +43,7 @@ body {
 
   &._fluid {
     max-width: $container-wide-width;
+    padding: 0 20px;
   }
 
   @media (max-width: $screen-md-min) {
@@ -92,6 +100,10 @@ body {
   justify-items: flex-end
 }
 
+._align-self-end {
+  align-self: flex-end
+}
+
 .masonry {
   @include make-masonry;
 }
@@ -108,5 +120,7 @@ body {
 @import './components/maps';
 @import './components/footer';
 @import './components/sidebar';
+
+@import './components/schedule';
 
 @import './shared';

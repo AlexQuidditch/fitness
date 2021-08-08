@@ -35,6 +35,11 @@
       order: 3
     }
   }
+
+  .inst-icon,
+  .fb-icon {
+    fill: rgba($color-white, .4);
+  }
 }
 
 .footer-logo {
@@ -42,7 +47,7 @@
   min-height: 32px;
 
   @media (max-width: $screen-sm-max) {
-    margin-bottom: 34px;
+    margin-bottom: 0;
   }
 }
 
@@ -64,6 +69,12 @@
     font-size: 20px;
     line-height: 1;
     color: $color-white;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    a {
+      font-size: 14px;
+    }
   }
 }
 

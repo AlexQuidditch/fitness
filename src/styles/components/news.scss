@@ -45,9 +45,38 @@
   }
 
   .image-list {
+    position: relative;
     gap: $grid-gutter-width * 2;
+
     img {
       width: 100%;
+    }
+
+    &::before,
+    &::after {
+      z-index: -1;
+
+      position: absolute;
+
+      content: '';
+
+      width: 1440px;
+
+      background-color: $color-accent;
+    }
+
+    &::before {
+      top: 80px;
+      right: 80px;
+
+      height: 720px;
+    }
+
+    &::after {
+      bottom: -80px;
+      left: 80px;
+
+      height: 1080px;
     }
   }
 
@@ -59,6 +88,18 @@
 
     .image-list {
       gap: math.div($grid-gutter-width, 2);
+
+      &::before {
+        top: 30px;
+        left: -80px;
+        height: 180px;
+      }
+
+      &::after {
+        bottom: 0;
+        left: -80px;
+        height: 200px;
+      }
     }
 
     .col-6 {

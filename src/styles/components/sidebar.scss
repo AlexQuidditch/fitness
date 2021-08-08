@@ -5,7 +5,7 @@ $hamburger-layer-height: 3px;
 $hamburger-padding-x: 0;
 $hamburger-padding-y: 5.5px;
 $hamburger-layer-spacing: 6px;
-$hamburger-layer-color: white;
+$hamburger-layer-color: $color-accent;
 $hamburger-hover-opacity: initial;
 
 @import '/node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
@@ -44,7 +44,7 @@ $hamburger-hover-opacity: initial;
     &.is-active .hamburger-inner,
     &.is-active .hamburger-inner::before,
     &.is-active .hamburger-inner::after {
-      background-color: $color-black;
+      background-color: $color-accent;
     }
 
     @media (max-width: $screen-sm-max) {

@@ -3,10 +3,35 @@
   id="hero"
   class="hero"
 >
+  <div
+    id="hero-gallery"
+    class="hero-gallery swiper-container"
+  >
+    <div class="swiper-wrapper">
+      <img
+        src="/src/images/hero_background.jpg"
+        alt=""
+        class="swiper-slide hero-gallery__slide"
+      >
+      <img
+        src="/src/images/hero_background.jpg"
+        alt=""
+        class="swiper-slide hero-gallery__slide"
+      >
+      <img
+        src="/src/images/hero_background.jpg"
+        alt=""
+        class="swiper-slide hero-gallery__slide"
+      >
+    </div>
+  </div>
+
+  <div class="swiper-pagination hero-gallery__pagination"></div>
+
   <div class="overlay">
-    <div class="container _fluid">
-      <h1 class="hero__title section__heading">{{ title }}</h1>
-      <div class="row">
+    <div class="row container _fluid">
+      <h1 class="col-8 col-sm-12 hero__title section__heading">{{ title }}<span>ДО 25 ИЮНЯ</span></h1>
+      <div class="row col-12 _align-self-end _sm-no-gap">
         <div class="col-4 col-sm-12">
           <ul class="sub-messages">
             {{#each subMessageList}}

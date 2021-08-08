@@ -1,7 +1,20 @@
-// import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
+import SwiperCore, { Pagination, Autoplay } from 'swiper/core';
+import 'swiper/swiper-bundle.css'
 
-export function createGallery() {
+SwiperCore.use([Pagination, Autoplay]);
 
+export function useGallery(selector: string) {
+  const swiper = new SwiperCore(selector, {
+    centeredSlides: true,
+    autoplay: {
+      delay: 4500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      bulletClass: `${selector.replaceAll('#', '')}__pagination-bullet`
+    },
+  });
+  return swiper;
 }

@@ -13,6 +13,14 @@
     flex-direction: column;
     justify-content: flex-end;
   }
+
+  @media (max-width: $screen-md-min) {
+    padding: 0;
+
+    &.section {
+      padding-top: 0;
+    }
+  }
 }
 
 .info-card {
@@ -59,6 +67,13 @@
     a {
       font-size: 0;
     }
+
+    .inst-icon,
+    .fb-icon {
+      width: 20px;
+      height: 20px;
+      fill: rgba($color-black, .3);
+    }
   }
 
   &__schedule-item {
@@ -71,7 +86,7 @@
     color: $color-black;
   }
 
-  @media (max-width: $screen-sm-max) {
+  @media (max-width: $screen-md-min) {
     padding: 20px;
 
     &__address {

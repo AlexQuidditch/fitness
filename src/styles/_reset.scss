@@ -1,3 +1,5 @@
+@import './variables';
+
 /* ----- Lists ----- */
 ul {
   list-style-type: none;
@@ -17,10 +19,14 @@ a, button {
   text-decoration: none;
 }
 
-::-moz-selection,
+::-moz-selection {
+  background: $color-accent;
+  color: $color-white;
+}
+
 ::selection {
-  background: rgba(black, .99);
-  color: white;
+  background: $color-accent;
+  color: $color-white;
 }
 
 img,
