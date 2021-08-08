@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <script
+    type="module"
+    src="/@vite/client"
+  ></script>
+  <meta charset="UTF-8" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="favicon.svg"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>СЕКЦИЯ</title>
+</head>
+
+<body>
+  <div
+    id="app"
+    class="wrapper"
+  >
+    <header
+      id="header"
+      class="header"
+    >
+      <div class="container _fluid">
+        <a
+          href="/"
+          class="logo__link"
+        >
+          <img
+            src="/src/images/logo.svg"
+            alt=""
+            class="logo__image"
+          >
+        </a>
+      </div>
+
+      <div class="menu-container">
+        <ul class="header-menu">
+          <li class="header-menu__item">
+            <a
+              href="/schedule.html"
+              class="header-menu__item-link"
+            >Расписание</a>
+          </li>
+          <li class="header-menu__item">
+            <a
+              href="/trainers"
+              class="header-menu__item-link"
+            >Тренеры</a>
+          </li>
+          <li class="header-menu__item">
+            <a
+              href="/services"
+              class="header-menu__item-link"
+            >Услуги</a>
+          </li>
+          <li class="header-menu__item">
+            <a
+              href="/prices"
+              class="header-menu__item-link"
+            >Цены</a>
+          </li>
+          <li class="header-menu__item">
+            <a
+              href="/about"
+              class="header-menu__item-link"
+            >О нас</a>
+          </li>
+          <li class="header-menu__item">
+            <a
+              href="/prices"
+              class="header-menu__item-link"
+            >ЦЕНЫ</a>
+          </li>
+        </ul>
+        <div class="header-avatar">
+          <img
+            src="/src/images/header_avatar.png"
+            class="header-avatar__image"
+          >
+        </div>
+        <a
+          href=""
+          class="header-menu__item-link _vertical"
+        >Личный кабинет</a>
+      </div>
+
+    </header>
+
+    <button
+      id="menu-button"
+      type="button"
+      class="sidebar__button hamburger hamburger--spring"
+      aria-label="Menu"
+      aria-controls="navigation"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <aside
+      id="sidebar"
+      class="sidebar"
+    >
+      <div class="sidebar__content">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu__item">
+            <a
+              href="/schedule.html"
+              class="sidebar-menu__item-link"
+            >Расписание</a>
+          </li>
+          <li class="sidebar-menu__item">
+            <a
+              href="/trainers"
+              class="sidebar-menu__item-link"
+            >Тренеры</a>
+          </li>
+          <li class="sidebar-menu__item">
+            <a
+              href="/services"
+              class="sidebar-menu__item-link"
+            >Услуги</a>
+          </li>
+          <li class="sidebar-menu__item">
+            <a
+              href="/prices"
+              class="sidebar-menu__item-link"
+            >Цены</a>
+          </li>
+          <li class="sidebar-menu__item">
+            <a
+              href="/about"
+              class="sidebar-menu__item-link"
+            >О нас</a>
+          </li>
+          <li class="sidebar-menu__item">
+            <a
+              href="/prices"
+              class="sidebar-menu__item-link"
+            >ЦЕНЫ</a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="schedule section">
+      <div class="container">
+        <h1 class="section__heading schedule__title">РАСПИСАНИЕ <span class="schedule__title _accent">секции</span></h1>
+
+        <div class="options-list">
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="all"
+              value="all"
+              class="options-item__checkbox"
+            >
+            <label
+              for="all"
+              class="options-item__label"
+            >
+              <span>Все</span>
+            </label>
+          </li>
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="fightings"
+              value="fightings"
+              class="options-item__checkbox"
+            >
+            <label
+              for="fightings"
+              class="options-item__label"
+            >
+              <span>Боевые искусства</span>
+            </label>
+          </li>
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="functional"
+              value="functional"
+              class="options-item__checkbox"
+            >
+            <label
+              for="functional"
+              class="options-item__label"
+            >
+              <span>Функциональный тренинг</span>
+            </label>
+          </li>
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="personal"
+              value="personal"
+              class="options-item__checkbox"
+            >
+            <label
+              for="personal"
+              class="options-item__label"
+            >
+              <span>Персональные тренировки</span>
+            </label>
+          </li>
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="recreational"
+              value="recreational"
+              class="options-item__checkbox"
+            >
+            <label
+              for="recreational"
+              class="options-item__label"
+            >
+              <span>Восстановление и реабилитация</span>
+            </label>
+          </li>
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="bootcamp"
+              value="bootcamp"
+              class="options-item__checkbox"
+            >
+            <label
+              for="bootcamp"
+              class="options-item__label"
+            >
+              <span>Растяжка</span>
+            </label>
+          </li>
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="teenagers"
+              value="teenagers"
+              class="options-item__checkbox"
+            >
+            <label
+              for="teenagers"
+              class="options-item__label"
+            >
+              <span>Тренировка подростков</span>
+            </label>
+          </li>
+        </div>
+
+        <table class="schedule-view">
+          <thead class="schedule-view__header">
+            <tr>
+              <th>
+                <svg
+                  width="42"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity=".5"
+                    d="M.94 10.94a1.5 1.5 0 000 2.12l9.545 9.547a1.5 1.5 0 102.122-2.122L4.12 12l8.486-8.485a1.5 1.5 0 10-2.122-2.122L.94 10.94zM42 10.5H2v3h40v-3z"
+                    fill="#000"
+                  />
+                </svg>
+              </th>
+              <th><span>ПН<br>10 сентября</span></th>
+              <th><span>ВТ<br>11 сентября</span></th>
+              <th><span>СР<br>12 сентября</span></th>
+              <th><span>чт<br>13 сентября</span></th>
+              <th><span>Пт<br>14 сентября</span></th>
+              <th><span>сб<br>15 сентября</span></th>
+              <th><span>вс<br>16 сентября</span></th>
+              <th>
+                <svg
+                  width="42"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity=".5"
+                    d="M.94 10.94a1.5 1.5 0 000 2.12l9.545 9.547a1.5 1.5 0 102.122-2.122L4.12 12l8.486-8.485a1.5 1.5 0 10-2.122-2.122L.94 10.94zM42 10.5H2v3h40v-3z"
+                    fill="#000"
+                  />
+                </svg>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="schedule-view__body">
+            <tr>
+              <td>8:00</td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Денис</span>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Chest, back & core</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Total Body</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>9:00</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>10:00</td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>11:00</td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>12:00</td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <div class="schedule-event">
+                  <span class="schedule-event__title">Arms, abs & shoulders</span>
+                  <span class="schedule-event__trainer">Павел</span>
+                </div>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer
+      id="footer"
+      class="footer"
+    >
+      <div class="container row">
+        <div class="row col-12">
+          <div class="row col-3 col-sm-12 footer__first-row">
+            <div class="row col-12 col-sm-9">
+              <img
+                src="/src/images/logo_white.svg"
+                alt=""
+                class="footer-logo col-5"
+              >
+            </div>
+            <div class="row col-12 col-sm-3">
+              <div class="col-1 col-sm-2">
+                <a href=""><svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="inst-icon"
+                  >
+                    <path
+                      d="M14.9999 10.0531C12.2761 10.0531 10.0533 12.2759 10.0533 14.9997C10.0533 17.7236 12.2761 19.9464 14.9999 19.9464C17.7238 19.9464 19.9466 17.7236 19.9466 14.9997C19.9466 12.2759 17.7238 10.0531 14.9999 10.0531ZM29.8363 14.9997C29.8363 12.9513 29.8548 10.9214 29.7398 8.87669C29.6247 6.50169 29.0829 4.39388 27.3462 2.65716C25.6058 0.916728 23.5017 0.378643 21.1267 0.263604C19.0783 0.148565 17.0484 0.167119 15.0036 0.167119C12.9552 0.167119 10.9253 0.148565 8.8806 0.263604C6.5056 0.378643 4.39778 0.92044 2.66106 2.65716C0.920635 4.39759 0.382549 6.50169 0.26751 8.87669C0.152471 10.9251 0.171026 12.955 0.171026 14.9997C0.171026 17.0445 0.152471 19.0781 0.26751 21.1228C0.382549 23.4978 0.924346 25.6056 2.66106 27.3423C4.40149 29.0827 6.5056 29.6208 8.8806 29.7359C10.929 29.8509 12.9589 29.8324 15.0036 29.8324C17.0521 29.8324 19.082 29.8509 21.1267 29.7359C23.5017 29.6208 25.6095 29.079 27.3462 27.3423C29.0866 25.6019 29.6247 23.4978 29.7398 21.1228C29.8585 19.0781 29.8363 17.0482 29.8363 14.9997ZM14.9999 22.6109C10.788 22.6109 7.3888 19.2117 7.3888 14.9997C7.3888 10.7878 10.788 7.3886 14.9999 7.3886C19.2118 7.3886 22.6111 10.7878 22.6111 14.9997C22.6111 19.2117 19.2118 22.6109 14.9999 22.6109ZM22.9228 8.85442C21.9394 8.85442 21.1452 8.06028 21.1452 7.07688C21.1452 6.09349 21.9394 5.29935 22.9228 5.29935C23.9062 5.29935 24.7003 6.09349 24.7003 7.07688C24.7006 7.3104 24.6548 7.54167 24.5656 7.75747C24.4764 7.97326 24.3455 8.16933 24.1803 8.33445C24.0152 8.49957 23.8192 8.63049 23.6034 8.71971C23.3876 8.80894 23.1563 8.85472 22.9228 8.85442Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="col-1 col-sm-2">
+                <a href=""><svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 30 30"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="fb-icon"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0 15.0838C0 22.5413 5.41625 28.7425 12.5 30V19.1663H8.75V15H12.5V11.6663C12.5 7.91625 14.9163 5.83375 18.3337 5.83375C19.4163 5.83375 20.5837 6 21.6663 6.16625V10H19.75C17.9163 10 17.5 10.9163 17.5 12.0837V15H21.5L20.8337 19.1663H17.5V30C24.5837 28.7425 30 22.5425 30 15.0838C30 6.7875 23.25 0 15 0C6.75 0 0 6.7875 0 15.0838Z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-5 col-sm-4">
+            <ul class="footer-links _first">
+              <li class="footer-link">
+                <a href="">Расписание</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Тренеры</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Акции</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Услуги и цены</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-4 col-sm-8">
+            <ul class="footer-links">
+              <li class="footer-link">
+                <a href="">F.A.Q.</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Правила студии</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Публичная оферта</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Политика конфиденциальности</a>
+              </li>
+              <li class="footer-link">
+                <a href="">Личный кабинет</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer-divider col-12">
+        <div class="row _no-gap col-12">
+          <div
+            class="col-6 col-sm-12 footer__message _copy-right"
+            style="order:1"
+          >© Фитнес-клуб Секция 2021. Все права защищены</div>
+          <hr
+            class="footer-divider _mobile col-sm-12"
+            style="order:2"
+          >
+          <div
+            class="col-6 col-sm-12 footer__message _address"
+            style="order:3"
+          >Москва, Проточный переулок 11</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script
+    type="module"
+    src="/src/scripts/main.ts"
+  ></script>
+</body>
+
+</html>

@@ -1,7 +1,9 @@
 import 'normalize.css/normalize.css'
-import 'swiper/swiper-bundle.css'
 
 import '../styles/style.scss'
+
+import { useGallery } from './gallery'
+import { useSchedule } from './schedule'
 
 const app = document.querySelector<HTMLDivElement>('#app')
 
@@ -48,6 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
   fillNearestBodyMindValue('Сегодня')
   fillPersonalBootCampValue('Сегодня')
 
+  useGallery('#hero-gallery')
+
   const $el = document.getElementById('menu-button')
   const $sidebarEl = document.getElementById('sidebar')
 
@@ -58,5 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!$el || !$sidebarEl) { return }
     $el.classList.toggle('is-active')
     $sidebarEl.classList.toggle('_active')
+    document.documentElement.classList.toggle('_no-scroll')
   })
 })
