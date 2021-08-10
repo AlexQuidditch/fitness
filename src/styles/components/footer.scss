@@ -36,9 +36,21 @@
     }
   }
 
+  &__social-link {
+    margin-right: 10px;
+  }
+
   .inst-icon,
   .fb-icon {
     fill: rgba($color-white, .4);
+  }
+
+  @media (max-width: $screen-sm-max) {
+    margin-bottom: 0;
+
+    &__social-link {
+      margin-left: 10px;
+    }
   }
 }
 

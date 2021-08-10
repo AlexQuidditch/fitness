@@ -1,5 +1,5 @@
 /* ----- Creates a wrapper for a series of columns ----- */
-@use "sass:math";
+@use 'sass:math';
 
 @import './variables';
 
@@ -8,18 +8,22 @@
   gap: $grid-gutter-width;
   grid-template-columns: repeat(12, minmax(0, 1fr));
 
-  @media (max-width: $screen-sm-max) {
-    gap: math.div($grid-gutter-width, 2)
-  }
-
   &._no-gap {
     gap: 0;
   }
 
-  @media (max-width: $screen-md-min) {
+  @media (max-width: $screen-sm-max) {
     &._sm-no-gap {
       gap: 0;
     }
+
+    &._sm-gap {
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    gap: math.div($grid-gutter-width, 2)
   }
 }
 
@@ -37,51 +41,37 @@
 @for $i from 1 through 12 {
   .col-#{$i} {
     grid-column: span #{$i};
-    position: relative;
+      flex: 1 1 percentage(($i / 12));
+      position: relative;
   }
 }
 
-@media (max-width: $screen-lg-min) {
+@media (max-width: $screen-md-max) {
   @for $i from 1 through 12 {
     .col-md-#{$i} {
       grid-column: span #{$i};
+      flex: 1 1 percentage(($i / 12));
       position: relative;
     }
   }
-
-  .col-md-hide {
-    display: none !important;
-  }
 }
 
-@media (max-width: $screen-md-min) {
+@media (max-width: $screen-sm-max) {
   @for $i from 1 through 12 {
     .col-sm-#{$i} {
       grid-column: span #{$i};
+      flex: 1 1 percentage(($i / 12));
       position: relative;
     }
   }
-
-  .col-sm-hide {
-    display: none !important;
-  }
 }
 
-@media (max-width: $screen-sm-min) {
+@media (max-width: $screen-xs-max) {
   @for $i from 1 through 12 {
     .col-xs-#{$i} {
       grid-column: span #{$i};
+      flex: 1 1 percentage(($i / 12));
       position: relative;
     }
-  }
-
-  .col-xs-hide {
-    display: none !important;
-  }
-}
-
-@media (min-width: $screen-md-min) {
-  .col-md-show {
-    display: none !important;
   }
 }

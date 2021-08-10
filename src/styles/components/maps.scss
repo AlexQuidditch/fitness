@@ -14,7 +14,7 @@
     justify-content: flex-end;
   }
 
-  @media (max-width: $screen-md-min) {
+  @media (max-width: $screen-sm-max) {
     padding: 0;
 
     &.section {
@@ -58,20 +58,28 @@
 
   &__networks {
     display: flex;
+    padding-left: 16px;
   }
 
   &__networks-item {
     display: flex;
     align-items: flex-start;
 
+    &:not(:last-child) {
+      a {
+        margin-right: 10px;
+      }
+    }
+
     a {
+      display: block;
       font-size: 0;
     }
 
     .inst-icon,
     .fb-icon {
-      width: 20px;
-      height: 20px;
+      width: 100%;
+      height: 100%;
       fill: rgba($color-black, .3);
     }
   }
@@ -86,7 +94,16 @@
     color: $color-black;
   }
 
-  @media (max-width: $screen-md-min) {
+  @media (max-width: $screen-sm-max) {
+    &__networks-item {
+      a {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
     padding: 20px;
 
     &__address {
@@ -95,12 +112,8 @@
 
     &__networks-item {
       a {
-        width: 24px;
-        height: 24px;
-      }
-      img {
-        width: 100%;
-        height: 100%;
+        width: 20px;
+        height: 20px;
       }
     }
 
@@ -119,7 +132,7 @@
   width: 100%;
   height: 720px;
 
-  @media (max-width: $screen-sm-max) {
+  @media (max-width: $screen-xs-max) {
     height: 460px;
   }
 }

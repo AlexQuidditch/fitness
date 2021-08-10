@@ -3,10 +3,6 @@
 .hero {
   position: relative;
 
-  @media (max-width: $screen-sm-max) {
-    height: 100vh;
-  }
-
   .overlay {
     padding-top: 250px;
     padding-bottom: 60px;
@@ -14,7 +10,7 @@
         rgba(0, 0, 0, 0.7) 0.02%,
         rgba(0, 0, 0, 0) 99.98%);
 
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-xs-max) {
       padding-top: 220px;
       padding-bottom: 40px;
     }
@@ -54,12 +50,22 @@
       background-color: #F58181;
 
       transform: translate(-50%, -50%) rotate(10deg);
+      user-select: none;
 
       border-radius: 50%;
     }
 
     @media (max-width: $screen-sm-max) {
-      margin-bottom: 170px;
+      font-size: 150px !important;
+
+      span {
+        transform: translate(-30%, 10%) rotate(10deg);
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 170px !important;
+      font-size: 50px !important;
 
       span {
         width: 80px;
@@ -104,6 +110,7 @@
     }
 
     @media (max-width: $screen-sm-max) {
+      max-width: 160px;
       width: 100%;
       height: 60px;
 
@@ -113,19 +120,22 @@
 
   .sub-messages {
     @media (max-width: $screen-sm-max) {
+      margin-bottom: 60px;
+    }
+
+    @media (max-width: $screen-xs-max) {
       margin-bottom: 50px;
     }
 
     &__item {
       font-family: $font-family-bold;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 50px;
-      line-height: 1;
-
       color: $color-accent;
 
       @media (max-width: $screen-sm-max) {
+        font-size: 50px;
+      }
+
+      @media (max-width: $screen-xs-max) {
         font-size: 30px;
       }
     }
@@ -175,7 +185,7 @@
 
   @media (max-width: $screen-sm-max) {
     &__pagination {
-      bottom: 40px;
+      bottom: 20px;
       right: 20px
     }
 
@@ -185,6 +195,13 @@
 
       margin-left: 5px;
       border-width: 1px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &__pagination {
+      bottom: 40px;
+      right: 20px
     }
   }
 }

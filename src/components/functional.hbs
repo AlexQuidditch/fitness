@@ -7,24 +7,23 @@
     <div class="container">
       <h2 class="functional__title section__heading">{{ title }}</h2>
 
-      <div class="row col-sm-hide">
+      <div class="row _no-gap d-md-none d-lg-grid">
         <div class="col-8"></div>
         <div class="col-4 section__nearest-training _right">
           {{nearestTraining}} <span id="nearest-functional-value"></span>
         </div>
       </div>
 
-      <div class="row _align-end">
-        <div class="column _sm-reverse col-9 col-sm-8 _align-start">
-          <div class="section__nearest-training _left col-md-show">
+      <div class="row _sm-gap">
+        <ul class="col-9 col-sm-12 section__sub-messages">
+          {{#each subMessageList}}
+          <li class="sub-messages__item _sm-right">{{this}}</li>
+          {{/each}}
+        </ul>
+        <div class="col-9 col-sm-8 d-lg-none">
+          <div class="section__nearest-training _left">
             {{nearestTraining}} <span id="nearest-functional-value">ЗАВТРА</span>
           </div>
-
-          <ul class="sub-messages section__sub-messages">
-            {{#each subMessageList}}
-            <li class="sub-messages__item">{{this}}</li>
-            {{/each}}
-          </ul>
         </div>
         <div class="col-3 col-sm-4">
           <button

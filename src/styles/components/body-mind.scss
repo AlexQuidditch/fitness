@@ -11,8 +11,13 @@
   background-color: $color-gray;
 
   @media (max-width: $screen-sm-max) {
-    background-size: contain;
-    background-position: -250% top;
+    background-size: 40%;
+    background-position: 15% 20%;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    background-size: 70%;
+    background-position: -5% 35%;
   }
 
   &__title {
@@ -30,7 +35,7 @@
 
     color: $color-black;
 
-    @media (max-width: $screen-sm-max) {
+    @media (max-width: $screen-xs-max) {
       font-size: $font-size-h2-xs;
     }
   }

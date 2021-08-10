@@ -8,60 +8,22 @@
   background-repeat: no-repeat;
   background-position: 70% center;
 
-  @media (max-width: $screen-md-min) {
-    background-size: contain;
-    background-position: 120% top;
-  }
-
   &__title {
-    margin-bottom: 60px;
-
     font-family: $font-family-bold;
-    font-style: normal;
-    font-weight: bold;
-    font-size: em(200px);
+    font-size: 200px;
 
-    line-height: 180px;
     white-space: pre-line;
 
     color: $color-black;
   }
 
-  &__nearest-training {
-    position: relative;
-    display: inline-block;
+  @media (max-width: $screen-sm-max) {
+    background-size: 40%;
+    background-position: 80% center;
+  }
 
-    width: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-right: 80px;
-
-    margin-bottom: 65px;
-
-    font-family: $font-family-regular;
-    font-size: 30px;
-    line-height: 1;
-
-    color: $color-black;
-    background-color: $color-accent;
-
-    &::before {
-      position: absolute;
-
-      top: 0;
-      left: -1000px;
-
-      width: 1000px;
-      height: 54px;
-
-      content: '';
-      background-color: inherit;
-    }
-
-    span {
-      margin-left: 5px;
-      font-family: $font-family-regular;
-      color: $color-white;
-    }
+  @media (max-width: $screen-xs-max) {
+    background-size: 60%;
+    background-position: 95% center;
   }
 }
