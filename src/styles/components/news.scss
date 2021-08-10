@@ -3,7 +3,7 @@
 @import '../variables';
 
 .news {
-  padding: 100px 0;
+  padding: 100px 0 80px 0;
 
   &__title {
     margin-bottom: 50px;
@@ -139,7 +139,6 @@
     .image-list {
       gap: math.div($grid-gutter-width, 2);
       padding-bottom: 0;
-      font-size: 0;
 
       &::before {
         top: 30px;

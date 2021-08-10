@@ -7,27 +7,27 @@ export const header = {
     },
     {
       text: 'Тренеры',
-      link: '/trainers',
+      link: '/trainers.html',
       anchor: '',
     },
     {
       text: 'Услуги',
-      link: '/services',
+      link: '/services.html',
       anchor: '',
     },
     {
       text: 'Цены',
-      link: '/prices',
+      link: '/prices.html',
       anchor: '',
     },
     {
       text: 'О нас',
-      link: '/about',
+      link: '/about.html',
       anchor: '',
     },
     {
       text: 'ЦЕНЫ',
-      link: '/prices',
+      link: '/prices.html',
       anchor: '',
     },
   ],
