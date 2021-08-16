@@ -36,10 +36,23 @@ body {
   }
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  height: auto;
+}
+
 .container {
   max-width: $container-width;
   margin: 0 auto;
   height: 100%;
+
+  &._small {
+    max-width: $container-small-width;
+    padding: 0 20px;
+  }
 
   &._fluid {
     max-width: $container-wide-width;
@@ -112,8 +125,74 @@ body {
   align-self: flex-end
 }
 
+.spacer {
+  flex: 1 1 auto;
+}
+
 .masonry {
   @include make-masonry;
+}
+
+.raw-content {
+  flex: 1 1 auto;
+  padding: 130px 0;
+
+  &__title {
+    margin-bottom: 60px;
+
+    font-family: $font-family-bold;
+    font-size: 100px;
+    line-height: 1;
+    text-align: center;
+
+    span {
+      color: $color-accent;
+    }
+  }
+
+  &__text {
+    font-family: $font-family-bold;
+    font-size: 20px;
+    line-height: 1.3;
+    white-space: pre-line;
+
+    h4 + p {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  &__message {
+    display: block;
+    margin-top: 40px;
+
+    font-family: $font-family-bold;
+    font-size: 50px;
+    line-height: 1;
+
+    text-align: center;
+    color: $color-black;
+  }
+
+  &__back-link {
+    display: block;
+    margin: 0 auto;
+
+    font-family: $font-family-light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 1;
+
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+
+    color: $color-accent;
+  }
 }
 
 @import './components/header';
@@ -130,8 +209,15 @@ body {
 @import './components/sidebar';
 
 @import './components/schedule';
+@import './components/contacts';
+@import './components/feedback';
+@import './components/price-list';
+@import './components/trainer-info';
 
+@import './pages/trainers';
 @import './pages/about-us';
 
 @import './shared';
 @import './display';
+
+@import './widgets/text-field';

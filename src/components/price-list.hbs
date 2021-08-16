@@ -1,0 +1,24 @@
+{{#with prices}}
+<section
+  id="price-list"
+  class="price-list"
+>
+  <div class="container">
+    <ul class="row">
+      {{#each list}}
+      <li class="col-4 col-sm-12 price-card">
+        <img
+          src="{{this.image}}"
+          alt="{{this.title}}"
+          class="price-card__image"
+        >
+        <span class="price-card__sticker">ДО 25 ИЮНЯ</span>
+        <h4 class="price-card__title">{{this.title}}</h4>
+        <p class="price-card__content">{{this.content}}</p>
+        <a href="{{this.link}}" class="price-card__button">ЗАКАЗАТЬ</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

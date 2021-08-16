@@ -12,7 +12,7 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   />
-  <title>СЕКЦИЯ</title>
+  <title>КОНТАКТЫ СЕКЦИИ</title>
 </head>
 
 <body>
@@ -24,10 +24,19 @@
 
     {{> sidebar }}
 
-    {{> schedule }}
+    <section class="contacts">
+      <div class="container">
+        <h1 class="contacts__title">КОНТАКТЫ <span>СЕКЦИИ</span></h1>
+      </div>
+    </section>
+
+    {{> maps }}
+
+    {{> feedback }}
 
     {{> footer }}
   </div>
+
   <script
     type="module"
     src="/src/scripts/main.ts"

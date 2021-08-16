@@ -14,11 +14,20 @@
     line-height: 1;
 
     text-align: center;
+    text-transform: uppercase;
 
     color: $color-black;
 
     &._accent {
       color: $color-accent;
+    }
+  }
+
+  &._trainer-view {
+    background-color: $color-white;
+
+    .options-list {
+      display: none;
     }
   }
 }

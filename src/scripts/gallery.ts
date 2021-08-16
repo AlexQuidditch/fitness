@@ -7,7 +7,7 @@ export function useGallery(selector: string) {
   const swiper = new SwiperCore(selector, {
     centeredSlides: true,
     autoplay: {
-      delay: 4500,
+      delay: 45000,
       disableOnInteraction: false,
     },
     pagination: {

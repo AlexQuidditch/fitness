@@ -24,19 +24,19 @@ export const footer = {
   serviceLinks: [
     {
       text: 'F.A.Q.',
-      link: '',
+      link: 'faq.html',
     },
     {
       text: 'Правила студии',
-      link: '',
+      link: '/rules.html',
     },
     {
       text: 'Публичная оферта',
-      link: '',
+      link: '/oferta.html',
     },
     {
       text: 'Политика конфиденциальности',
-      link: '',
+      link: '/confidential.html',
     },
     {
       text: 'Личный кабинет',

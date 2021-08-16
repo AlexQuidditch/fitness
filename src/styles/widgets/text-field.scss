@@ -1,0 +1,52 @@
+@import '../variables';
+
+.text-field {
+  position: relative;
+  padding: 15px 0 0;
+
+  font-family: $font-family-bold;
+
+  &__input {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 5px solid $color-accent;
+    outline: 0;
+    font-size: 50px;
+    padding: 12px 0 0 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:placeholder-shown {
+      border-color: $color-gray;
+
+      ~.text-field__label {
+        font-size: 50px;
+        cursor: text;
+        top: 20px;
+      }
+    }
+
+    &:focus {
+      border-color: $color-accent;
+
+      ~.text-field__label {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__label,
+  &__input:focus~.text-field__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 20px;
+    color: $color-gray;
+  }
+}

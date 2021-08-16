@@ -1,0 +1,54 @@
+{{#with trainers}}
+<section
+  id="trainers"
+  class="trainers _with-filter"
+>
+  <div class="container">
+    <h2 class="trainers__title section__heading">
+      Тренеры <span class="trainers__title _accent">секции</span>
+    </h2>
+
+    <ul class="options-list">
+      {{#each options}}
+      <li class="options-item">
+        <input
+          type="checkbox"
+          name="options"
+          id="{{this.value}}"
+          value="{{this.value}}"
+          class="options-item__checkbox"
+        >
+        <label
+          for="{{this.value}}"
+          class="options-item__label"
+        >
+          <span>{{this.text}}</span>
+        </label>
+      </li>
+      {{/each}}
+    </ul>
+
+    <ul class="trainers-list row">
+      {{#each list}}
+      <li class="col-4 col-xs-12 col-sm-6 trainer-item">
+        <img
+          src="{{this.photo}}"
+          alt="{{this.name}}"
+          class="trainer-item__avatar"
+        >
+        <h5 class="trainer-item__name">{{this.name}}</h5>
+        <ul class="trainer-item__skills">
+          {{#each this.skills}}
+          <li class="trainer-item__skills-item">{{this}}</li>
+          {{/each}}
+        </ul>
+        <a
+          href="/{{this.schedule}}.html"
+          class="trainer-item__schedule"
+        >РАСПИСАНИЕ →</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

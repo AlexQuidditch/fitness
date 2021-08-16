@@ -1,0 +1,70 @@
+{{#with trainerInfo}}
+<section class="trainer-info">
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-10 trainer-info__container">
+        <h1 class="trainer-info__title">{{name}}</h1>
+
+        <div class="trainer-info__photo">
+          <img
+            src="/src/images/belyakov.png"
+            alt="{{name}}"
+          />
+          <span>{{grade}}</span>
+        </div>
+
+        <div class="spacer"></div>
+
+        <ul class="trainer-info__list">
+          {{#each skills}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="col-6"></div>
+      <div class="col-6">
+        <a
+          href=""
+          class="trainer-info__action-button"
+        >ЗАПИСАТЬСЯ на тренировку</a>
+        <a
+          href=""
+          class="trainer-info__action-button"
+        >
+          Слушать плейлист
+          <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.992 0C8.968 0 0 8.97 0 19.993 0 31.027 8.968 40 19.992 40 31.025 40 40 31.025 40 19.993 40 8.97 31.025 0 19.992 0zM9.847 27.34a24.247 24.247 0 017.063-1.063c4.023 0 7.995 1.02 11.487 2.95.208.113.396.486.483.953.083.467.05.945-.087 1.193a1.017 1.017 0 01-1.39.4 21.844 21.844 0 00-16.941-1.723 1.017 1.017 0 01-1.285-.67c-.179-.583.19-1.883.67-2.04zm-.872-7.367a30.257 30.257 0 017.933-1.058c4.824 0 9.612 1.167 13.85 3.377.299.15.517.406.617.72a1.243 1.243 0 01-.087.963c-.378.74-.821 1.238-1.1 1.238-.203 0-.403-.05-.583-.143a27.217 27.217 0 00-12.695-3.09 27.233 27.233 0 00-7.277.975A1.248 1.248 0 018.1 22.08c-.187-.703.242-1.933.875-2.107zm-.225-4.81a1.466 1.466 0 01-1.788-1.068c-.205-.83.313-1.793 1.066-1.983a37.272 37.272 0 018.88-1.082c5.75 0 11.26 1.293 16.374 3.845a1.48 1.48 0 01.666 1.983c-.238.48-.755.997-1.325.997-.223 0-.444-.05-.646-.145a33.376 33.376 0 00-15.069-3.543c-2.725 0-5.47.335-8.158.996z" fill="#fff"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class="trainer-about__subtitle">О тренере</h3>
+    <div class="row">
+      {{#each about}}
+      <p class="col-6 col-sm-12 trainer-about__text">{{this}}</p>
+      {{/each}}
+
+      <div class="col-6 col-sm-12">
+        <h3 class="trainer-about__subtitle">Образование</h3>
+        <ul class="trainer-about__list">
+          {{#each education}}
+          <li><span>{{this.source}}</span> — {{this.text}}</li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <div class="col-6 col-sm-12">
+        <h3 class="trainer-about__subtitle">Награды и достижения</h3>
+        <ul class="trainer-about__list">
+          {{#each achievements}}
+          <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+{{/with}}

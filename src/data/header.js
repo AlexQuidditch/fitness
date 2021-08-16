@@ -26,8 +26,8 @@ export const header = {
       anchor: '',
     },
     {
-      text: 'ЦЕНЫ',
-      link: '/prices.html',
+      text: 'Контакты',
+      link: '/contacts.html',
       anchor: '',
     },
   ],

@@ -12,8 +12,10 @@ import { news } from '../data/news';
 import { personal } from '../data/personal';
 import { schedule } from '../data/schedule';
 import { trainers } from '../data/trainers';
+import { prices } from '../data/price-list';
+import { trainerInfo } from '../data/trainer-info';
 
 export default handlebars({
-  context: { hero, header, bootcamp, functional, fightings, bodyMind, personal, trainers, news, schedule, footer },
+  context: { hero, header, bootcamp, functional, fightings, bodyMind, personal, trainers, prices, trainerInfo, news, schedule, footer },
   partialDirectory: resolve(__dirname, '../components'),
 });
