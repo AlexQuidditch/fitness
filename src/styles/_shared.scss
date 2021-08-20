@@ -153,6 +153,10 @@
   &__heading {
     margin-bottom: 60px;
     line-height: 1;
+
+    span {
+      color: $color-accent;
+    }
   }
 
   @media (max-width: $screen-sm-max) {

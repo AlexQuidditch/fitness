@@ -38,6 +38,10 @@
 
   &__social-link {
     margin-right: 10px;
+
+    &:hover {
+      svg { fill: $color-white; }
+    }
   }
 
   .inst-icon,
@@ -81,6 +85,10 @@
     font-size: 20px;
     line-height: 1;
     color: $color-white;
+
+    &:hover {
+      color: $color-accent;
+    }
   }
 
   @media (max-width: $screen-sm-max) {

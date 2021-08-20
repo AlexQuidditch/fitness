@@ -31,6 +31,8 @@ body {
   overflow-x: hidden;
   height: auto;
 
+  counter-reset: section;
+
   &._no-scroll {
     overflow-y: hidden;
   }
@@ -215,9 +217,11 @@ body {
 @import './components/trainer-info';
 
 @import './pages/trainers';
+@import './pages/services';
 @import './pages/about-us';
 
 @import './shared';
 @import './display';
 
 @import './widgets/text-field';
+@import './widgets/tooltip';

@@ -16,8 +16,9 @@ const config: UserConfig = {
 
 readdirSync(__dirname)
   .forEach(file => {
-    if (!file.endsWith('.html')) { return; }
-    const key = file.substring(0, file.length - 5)
+    const targetExt = '.html'
+    if (!file.endsWith(targetExt)) { return; }
+    const key = file.substring(0, file.length - targetExt.length)
     config.build.rollupOptions.input[key] = resolve(__dirname, file)
   });
 

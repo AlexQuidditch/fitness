@@ -1,0 +1,40 @@
+{{#with services}}
+{{#each list}}
+<section class="services section">
+  <div class="container">
+    <div class="row services__information">
+      <div class="col-6 col-sm-12">
+        <h4 class="services__title">{{this.title}}</h4>
+        <p class="services__description">{{this.description}}</p>
+      </div>
+      <div class="col-6 col-sm-12">
+        <img
+          src="/src/images/service-{{math @index "+" 1}}.png"
+          alt=""
+          class="services__image"
+        >
+      </div>
+    </div>
+
+    {{#if this.items.length}}
+    <ul class="services-list row">
+      {{#each this.items}}
+      <li class="services-list__item col-6 col-sm-12">
+        <h5 class="services-list__item-title">{{this.title.main}} <span>{{this.title.additional}}</span></h5>
+        <a href="" class="tooltip-container{{#if_even @index}} _left{{/if_even}}">
+          <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.24 11.277H13.7V8.966h2.54v2.311zM13.7 12.42h2.54V22H13.7v-9.58z" fill="#000"/><circle cx="15" cy="15" r="13" stroke="#83C8D2" stroke-width="4"/></svg>
+          <div class="tooltip">{{this.tooltip}}</div>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+
+    <a
+      href="/functional.html"
+      class="section__action-button"
+    >Начать тренировку</a>
+  </div>
+</section>
+{{/each}}
+{{/with}}
