@@ -1,0 +1,24 @@
+{{#with promotions}}
+<section
+  id="promotion-list"
+  class="promotion-list"
+>
+  <div class="container">
+    <ul class="row">
+      {{#each list}}
+      <li class="col-4 col-sm-12 promotion-card">
+        <img
+          src="{{this.image}}"
+          alt="{{this.title}}"
+          class="promotion-card__image"
+        >
+        <span class="promotion-card__sticker">ДО 25 ИЮНЯ</span>
+        <h4 class="promotion-card__title">{{this.title}}</h4>
+        <p class="promotion-card__content">{{this.content}}</p>
+        <a href="{{this.link}}" class="promotion-card__action-button">ЗАКАЗАТЬ</a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+{{/with}}

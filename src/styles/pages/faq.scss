@@ -1,0 +1,14 @@
+@import '../variables';
+
+.faq {
+  .section__heading {
+    margin-top: 130px;
+    margin-bottom: 50px;
+
+    font-family: $font-family-bold;
+    font-size: 100px;
+    line-height: 1;
+
+    text-align: center;
+  }
+}

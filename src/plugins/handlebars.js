@@ -12,15 +12,42 @@ import { news } from '../data/news';
 import { personal } from '../data/personal';
 import { schedule } from '../data/schedule';
 import { trainers } from '../data/trainers';
-import { prices } from '../data/price-list';
+import { promotions } from '../data/promotion-list';
 import { services } from '../data/services';
+import { prices } from '../data/prices';
+import { faqList } from '../data/faq';
 import { trainerInfo } from '../data/trainer-info';
 
 export default handlebars({
-  context: { hero, header, bootcamp, functional, fightings, bodyMind, personal, trainers, prices, trainerInfo, news, schedule, services, footer },
+  context: { hero, header, bootcamp, functional, fightings, bodyMind, personal, trainers, promotions, trainerInfo, news, schedule, services, prices, faqList, footer },
   partialDirectory: resolve(__dirname, '../components'),
   helpers: {
-    'if_even': (conditional, options) => (conditional % 2) == 0 ? options.fn(this) : options.inverse(this),
-    'get_length': (obj) => obj.length,
+    if_even: function(conditional, options) {
+      return (conditional % 2) == 0 ? options.fn(this) : options.inverse(this);
+    },
+    each_in_range: (from, to, context, options) => {
+      let item = '';
+      for (let i = from, j = to; i < j; i++) {
+        item = item + options.fn(context[i]);
+      }
+      return item;
+    },
+    splice_of: (v, idx) => {
+      console.log({ v, idx });
+      return v.splice(0, idx)
+    },
+    get_length: v => v.length,
+    json: v => JSON.stringify(v),
+    math: (lvalue, operator, rvalue) => {
+      lvalue = parseFloat(lvalue);
+      rvalue = parseFloat(rvalue);
+      return {
+        '+': lvalue + rvalue,
+        '-': lvalue - rvalue,
+        '*': lvalue * rvalue,
+        '/': lvalue / rvalue,
+        '%': lvalue % rvalue
+      }[operator];
+    },
   }
 });

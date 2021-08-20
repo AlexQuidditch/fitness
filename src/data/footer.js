@@ -2,23 +2,23 @@ export const footer = {
   clientLinks: [
     {
       text: 'Расписание',
-      link: '',
+      link: '/schedule.html',
     },
     {
       text: 'Тренеры',
-      link: '',
+      link: '/trainers.html',
     },
     {
       text: 'Акции',
-      link: '',
+      link: '/promotions.html',
     },
     {
       text: 'Услуги и цены',
-      link: '',
+      link: '/services.html',
     },
     {
       text: 'Контакты',
-      link: '',
+      link: '/contacts.html',
     },
   ],
   serviceLinks: [

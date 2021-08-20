@@ -1,12 +1,12 @@
 @import '../variables';
 
-.price-list {
+.promotion-list {
   padding: 60px 0;
 
   background-color: $color-gray;
 }
 
-.price-card {
+.promotion-card {
   background-color: $color-white;
 
   &__image {
@@ -63,7 +63,7 @@
     color: rgba($color-black, .5);
   }
 
-  &__button {
+  &__action-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,6 +81,7 @@
     line-height: 1;
 
     cursor: pointer;
+    user-select: none;
 
     transition:
       background-color .2s ease-in-out;

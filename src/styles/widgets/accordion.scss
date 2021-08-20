@@ -1,0 +1,109 @@
+@import '../variables';
+
+/* Accordion styles */
+.accordions {
+  overflow: hidden;
+}
+
+.accordion {
+  width: 100%;
+  margin-bottom: 120px;
+
+  color: white;
+  overflow: hidden;
+  background-color: $color-accent;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+
+
+  &:nth-child(even) {
+    background-color: $color-black;
+  }
+
+  &__label {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: $font-family-bold;
+    font-size: 50px;
+    line-height: 1;
+
+    padding: 14px 170px 14px 130px;
+    cursor: pointer;
+    transition:
+      background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: rgba($color-white, $alpha: .3)
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 30px;
+
+      content: "+";
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 57px;
+      height: 57px;
+
+      padding-top: 8px;
+
+      font-size: 100px;
+      line-height: 0;
+
+      text-align: center;
+      transition: all .35s;
+
+      transform-origin: center;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    margin: 0;
+    padding: 0 170px 0 130px;
+    color: $color-white;
+
+    font-family: $font-family-regular;
+    font-size: 20px;
+    line-height: 1.5;
+
+    transition: all .35s ease-in-out;
+  }
+
+  &__close {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    font-size: 0.75em;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($color-accent, 10%);
+    }
+  }
+}
+
+// :checked
+input:checked {
+  +.accordion__label {
+    &::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  ~.accordion__content {
+    max-height: 100vh;
+    padding: 14px 170px 40px 130px;
+  }
+}

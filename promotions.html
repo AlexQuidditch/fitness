@@ -24,15 +24,9 @@
 
     {{> sidebar }}
 
-    <section class="prices section">
-      <div class="container">
-        <h1 class="section__heading">ЦЕНЫ <span>СЕКЦИИ</span></h1>
-      </div>
-    </section>
+    {{> hero-small }}
 
-    {{#each prices.list}}
-    {{> prices priceItem=this }}
-    {{/each}}
+    {{> promotion-list }}
 
     {{> footer }}
   </div>

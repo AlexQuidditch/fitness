@@ -16,6 +16,11 @@ export const header = {
       anchor: '',
     },
     {
+      text: 'Акции',
+      link: '/promotions.html',
+      anchor: '',
+    },
+    {
       text: 'Цены',
       link: '/prices.html',
       anchor: '',

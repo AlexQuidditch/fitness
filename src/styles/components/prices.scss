@@ -1,0 +1,145 @@
+@use 'sass:math';
+
+@import '../variables';
+
+.prices {
+  .section__heading {
+    margin-top: 130px;
+    margin-bottom: 50px;
+
+    font-family: $font-family-bold;
+    font-size: 100px;
+    line-height: 1;
+
+    text-align: center;
+  }
+
+  &:nth-child(odd) {
+    .prices__title,
+    .prices-list__item {
+      background-color: $color-accent;
+    }
+  }
+
+  &:nth-child(even) {
+    .prices__title,
+    .prices-list__item {
+      background-color: $color-black;
+    }
+  }
+
+  &__title {
+    height: 100px;
+
+    font-family: $font-family-bold;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+
+    color: $color-white;
+  }
+
+  .prices-list {
+    gap: $grid-gutter-width * 2;
+    padding: 80px 0;
+
+    @media (max-width: $screen-xs-max) {
+      gap: math.div($grid-gutter-width, 2)
+    }
+
+    &__item {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      min-height: 240px;
+      padding: 40px 40px 0 40px;
+
+      font-family: $font-family-bold;
+      color: $color-white;
+    }
+
+    &__item-title {
+      font-size: 50px;
+      line-height: 1;
+    }
+
+    &__item-badge {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      display: flex;
+      align-items: center;
+      align-content: center;
+      text-align: center;
+
+      width: 80px;
+      height: 80px;
+
+      padding-left: 4px;
+      padding-right: 4px;
+
+      font-size: 30px;
+      line-height: 0.9;
+
+      background-color: #F58181;
+
+      transform: translate(25%, -25%);
+      user-select: none;
+
+      border-radius: 50%;
+    }
+
+    &__item-footer {
+      position: relative;
+      overflow: hidden;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      flex: 1 1 50px;
+    }
+
+    &__item-price {
+      margin-bottom: 16px;
+
+      font-family: $font-family-regular;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    &__item-button {
+      position: absolute;
+      bottom: -90px;
+      right: 0;
+
+      display: flex;
+      justify-content: center;
+
+      padding-top: 20px;
+
+      width: 160px;
+      height: 160px;
+
+      font-family: $font-family-bold;
+      font-size: 30px;
+      line-height: 1;
+
+      color: $color-white;
+
+      border: solid 10px #FFFFFF;
+      border-radius: 50%;
+
+      transition:
+        background-color .2s ease-in-out;
+
+      &:hover {
+        background-color: rgba($color-white, .3);
+      }
+    }
+  }
+}

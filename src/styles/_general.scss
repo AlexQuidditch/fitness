@@ -213,10 +213,12 @@ body {
 @import './components/schedule';
 @import './components/contacts';
 @import './components/feedback';
-@import './components/price-list';
+@import './components/prices';
+@import './components/promotion-list';
 @import './components/trainer-info';
 
 @import './pages/trainers';
+@import './pages/faq';
 @import './pages/services';
 @import './pages/about-us';
 
@@ -225,3 +227,4 @@ body {
 
 @import './widgets/text-field';
 @import './widgets/tooltip';
+@import './widgets/accordion';

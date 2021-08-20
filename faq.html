@@ -24,15 +24,17 @@
 
     {{> sidebar }}
 
-    <section class="prices section">
+    <section class="faq section">
       <div class="container">
-        <h1 class="section__heading">ЦЕНЫ <span>СЕКЦИИ</span></h1>
+        <h1 class="section__heading">F.A.Q.</h1>
       </div>
     </section>
 
-    {{#each prices.list}}
-    {{> prices priceItem=this }}
-    {{/each}}
+    <section class="faq section">
+      <div class="container">
+        {{> accordion items=faqList }}
+      </div>
+    </section>
 
     {{> footer }}
   </div>

@@ -1,4 +1,4 @@
-export const prices = {
+export const promotions = {
   list: [
     {
       image: '/src/images/price-card.png',

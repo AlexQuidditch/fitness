@@ -4,6 +4,14 @@
 .services {
   padding-bottom: 60px;
 
+  &._page {
+    padding-top: 50px;
+
+    .services__title {
+      margin-top: 130px;
+    }
+  }
+
   &:nth-child(odd) {
     background-color: $color-gray;
   }
