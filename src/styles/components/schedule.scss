@@ -24,7 +24,12 @@
   }
 
   &._trainer-view {
+    padding-bottom: 60px;
     background-color: $color-white;
+
+    .schedule__title {
+      padding: 0 20px 20px;
+    }
 
     .options-list {
       display: none;
@@ -36,6 +41,25 @@
   width: 100%;
 
   border-collapse: collapse;
+
+  &._mobile,
+  &._tablet {
+    display: none;
+  }
+
+  @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+    display: none;
+    &._tablet {
+      display: table;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    display: none;
+    &._mobile {
+      display: table;
+    }
+  }
 
   &__header {
     tr {
@@ -51,6 +75,8 @@
         }
 
         &:last-child {
+          text-align: right;
+
           svg {
             transform: rotate(180deg);
           }
@@ -78,6 +104,10 @@
 
           color: $color-white;
           background-color: $color-accent;
+
+          @media (max-width: $screen-xs-max) {
+            width: 175px;
+          }
         }
       }
     }
@@ -93,7 +123,9 @@
         text-align: center;
 
         &:first-child {
+          padding-top: 30px;
           text-align: right;
+          vertical-align: top;
           font-family: $font-family-bold;
           font-size: 20px;
           line-height: 1;
@@ -191,6 +223,10 @@
 
       transition: all 0.3s ease;
     }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-bottom: 50px;
   }
 }
 

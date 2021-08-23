@@ -22,8 +22,11 @@
       <li class="services-list__item col-6 col-sm-12">
         <h5 class="services-list__item-title">{{this.title.main}} <span>{{this.title.additional}}</span></h5>
         <a href="" class="tooltip-container{{#if_even @index}} _left{{/if_even}}">
-          <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.24 11.277H13.7V8.966h2.54v2.311zM13.7 12.42h2.54V22H13.7v-9.58z" fill="#000"/><circle cx="15" cy="15" r="13" stroke="#83C8D2" stroke-width="4"/></svg>
-          <div class="tooltip">{{this.tooltip}}</div>
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.757 7.447H9.205V6.035h1.552v1.412zm-1.552.699h1.552V14H9.205V8.146z" fill="#000"/><circle cx="10" cy="10" r="8.5" stroke="#83C8D2" stroke-width="3"/></svg>
+          <div class="tooltip">
+            <h6>{{this.title.main}}</h6>
+            <p>{{this.tooltip}}</p>
+          </div>
         </a>
       </li>
       {{/each}}

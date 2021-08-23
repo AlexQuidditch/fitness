@@ -2,13 +2,89 @@
 
 
 .services {
+  padding-top: 130px;
   padding-bottom: 60px;
+
+  &.section {
+    padding-top: 130px;
+  }
+
+  &._first {
+    .trainers__title {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $screen-sm-max) {
+    .container {
+      padding: 0 50px;
+    }
+
+    &.section {
+      padding: 60px 0;
+    }
+
+    &._first {
+      padding-top: 120px;
+      padding-bottom: 0;
+
+      .trainers__title {
+        margin-bottom: 30px;
+      }
+    }
+
+    .section__action-button {
+      width: auto;
+      height: 100px;
+      max-width: initial;
+
+      padding: 0;
+      margin-top: 30px;
+      margin-left: 60px;
+      margin-right: 60px;
+
+      font-size: 50px;
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &.section {
+      padding: 30px 0;
+    }
+
+    .container {
+      padding: 0 20px;
+    }
+
+    &._first {
+      padding-top: 80px;
+    }
+
+    .section__action-button {
+      height: 40px;
+
+      margin-top: 20px;
+      margin-left: 0;
+      margin-right: 0;
+
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
 
   &._page {
     padding-top: 50px;
 
     .services__title {
       margin-top: 130px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding-top: 80px;
+
+      .services__title {
+        margin-top: 0;
+      }
     }
   }
 
@@ -18,12 +94,30 @@
 
   .row {
     gap: 80px;
+
+    @media (max-width: $screen-sm-max) {
+      gap: 40px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      gap: 20px;
+    }
   }
 
   &__information {
-    + .section__action-button {
+    +.section__action-button {
       margin-top: 60px;
       margin-bottom: 60px;
+
+      @media (max-width: $screen-sm-max) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -39,7 +133,7 @@
     line-height: 1;
 
     color: $color-accent;
-      counter-increment: section;
+    counter-increment: section;
 
     &::after {
       position: absolute;
@@ -55,6 +149,28 @@
 
       content: "0"counter(section)"";
     }
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 0;
+      margin-bottom: 40px;
+
+      &::after {
+        right: 15px;
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: 10px;
+
+      font-size: 50px;
+
+      &::after {
+        top: -30px;
+        right: 40px;
+
+        font-size: 200px;
+      }
+    }
   }
 
   &__description {
@@ -63,16 +179,57 @@
     font-size: 30px;
     line-height: 1;
 
-    color: rgba($color-black, .5)
+    color: rgba($color-black, .5);
+
+    @media (max-width: $screen-sm-max) {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      font-size: 20px;
+      line-height: 1.25;
+    }
   }
 
   &__image {
     display: block;
     max-width: 680px;
+
+    @media (max-width: $screen-sm-max) {
+      max-width: initial;
+      width: calc(100% + 100px);
+      margin: 0 -50px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      width: calc(100% + 40px);
+      margin: 0 -20px;
+    }
   }
 
   .services-list {
     row-gap: 0;
+
+    @media (max-width: $screen-sm-max) {
+      padding: 0 60px;
+      margin-top: 20px;
+
+      .services-list__item {
+        border-top: solid 1px darken(#E5E5E5, 10%);
+      }
+    }
+
+    @media (max-width: $screen-xs-max) {
+      padding: 0;
+
+      .services-list__item {
+        border-top: none
+      }
+    }
 
     &__item {
       position: relative;
@@ -99,6 +256,20 @@
 
         transform: translateY(-50%);
       }
+
+      @media (max-width: $screen-xs-max) {
+        padding: 0 0 0 30px;
+        border-top: none;
+
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+
+        &::before {
+          width: 20px;
+          height: 3px;
+        }
+      }
     }
 
     &__item-title {
@@ -109,6 +280,10 @@
       span {
         font-family: $font-family-light;
         font-weight: 300;
+      }
+
+      @media (max-width: $screen-xs-max) {
+        font-size: 25px;
       }
     }
   }

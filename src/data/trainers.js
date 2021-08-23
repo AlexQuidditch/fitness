@@ -1,7 +1,7 @@
 export const trainers = {
   list: Array.from(Array(6), () => ({
     name: 'Денис Беляков',
-    photo: '/src/images/belyakov.png',
+    photo: '/src/images/belyakov.jpg',
     skills: [
       'персональные тренировки',
       'восстановление и реабилитация',

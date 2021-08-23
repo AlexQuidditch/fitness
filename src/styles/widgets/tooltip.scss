@@ -6,6 +6,24 @@
   margin-left: 16px;
   font-size: 0;
 
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    position: static;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    margin-left: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
   &._left {
     right: 0;
 
@@ -51,7 +69,8 @@
   left: 0;
 
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   opacity: 0;
   visibility: hidden;
@@ -90,5 +109,37 @@
     height: 0;
 
     border-style: solid;
+  }
+
+  h6, p {
+    margin: 0;
+  }
+
+  h6 {
+    margin-bottom: 10px;
+
+    font-family: $font-family-bold;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    top: 90%;
+
+    left: 0 !important;
+    right: 0 !important;
+
+    width: 100%;
+    height: initial;
+
+    padding: 30px 20px;
+
+    transform: none;
+
+    &::before,
+    &::after {
+      content: none;
+      display: none;
+    }
   }
 }

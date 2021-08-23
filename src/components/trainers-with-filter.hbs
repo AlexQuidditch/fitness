@@ -5,7 +5,7 @@
 >
   <div class="container">
     <h2 class="trainers__title section__heading">
-      Тренеры <span class="trainers__title _accent">секции</span>
+      Тренеры <span>секции</span>
     </h2>
 
     <ul class="options-list">
@@ -28,7 +28,27 @@
       {{/each}}
     </ul>
 
-    <ul class="trainers-list row">
+    <div class="trainers-list-controls">
+      <button
+        data-target="#trainer-list"
+        data-direction="left"
+        class="trainers-list-controls__button _left"
+      >
+        <svg width="42" height="24" xmlns="http://www.w3.org/2000/svg"><path opacity=".5" d="M.94 10.94a1.5 1.5 0 000 2.12l9.545 9.547a1.5 1.5 0 102.122-2.122L4.12 12l8.486-8.485a1.5 1.5 0 10-2.122-2.122L.94 10.94zM42 10.5H2v3h40v-3z" fill="#000" /></svg>
+      </button>
+      <button
+        data-target="#trainer-list"
+        data-direction="right"
+        class="trainers-list-controls__button _right"
+      >
+        <svg width="42" height="24" xmlns="http://www.w3.org/2000/svg"><path opacity=".5" d="M.94 10.94a1.5 1.5 0 000 2.12l9.545 9.547a1.5 1.5 0 102.122-2.122L4.12 12l8.486-8.485a1.5 1.5 0 10-2.122-2.122L.94 10.94zM42 10.5H2v3h40v-3z" fill="#000" /></svg>
+      </button>
+    </div>
+
+    <ul
+      id="trainer-list"
+      class="trainers-list row"
+    >
       {{#each list}}
       <li class="col-4 col-xs-12 col-sm-6 trainer-item">
         <img

@@ -2,13 +2,22 @@
 
 .faq {
   .section__heading {
-    margin-top: 130px;
-    margin-bottom: 50px;
-
     font-family: $font-family-bold;
-    font-size: 100px;
-    line-height: 1;
-
     text-align: center;
+  }
+
+  @media (max-width: $screen-sm-max) {
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .container {
+      padding: 0;
+    }
+
+    &.section {
+      &:not(._first) {
+        padding-top: 30px;
+      }
+    }
   }
 }

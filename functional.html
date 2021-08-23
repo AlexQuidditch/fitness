@@ -29,7 +29,8 @@
         <div class="row services__information">
           <div class="col-6 col-sm-12">
             <h4 class="services__title">Функциональные тренировки</h4>
-            <p class="services__description">Сбалансированные тренировки для развития глубокой мускулатуры, полезной в обычной жизни</p>
+            <p class="services__description">Сбалансированные тренировки для развития глубокой мускулатуры, полезной в
+              обычной жизни</p>
           </div>
           <div class="col-6 col-sm-12">
             <img
@@ -49,7 +50,23 @@
               href=""
               class="tooltip-container{{#if_even @index}} _left{{/if_even}}"
             >
-              <svg width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M16.24 11.277H13.7V8.966h2.54v2.311zM13.7 12.42h2.54V22H13.7v-9.58z" fill="#000" /> <circle cx="15" cy="15" r="13" stroke="#83C8D2" stroke-width="4" /> </svg>
+              <svg
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.757 7.447H9.205V6.035h1.552v1.412zm-1.552.699h1.552V14H9.205V8.146z"
+                  fill="#000"
+                />
+                <circle
+                  cx="10"
+                  cy="10"
+                  r="8.5"
+                  stroke="#83C8D2"
+                  stroke-width="3"
+                />
+              </svg>
               <div class="tooltip">{{this.tooltip}}</div>
             </a>
           </li>
@@ -79,14 +96,33 @@
     >
       <div class="container">
         <h2 class="trainers__title section__heading">Кто ведет тренировку</h2>
+        <div class="trainers-list-controls">
+          <button
+            data-target="#trainer-list"
+            data-direction="left"
+            class="trainers-list-controls__button _left"
+          >
+            <svg width="42" height="24" xmlns="http://www.w3.org/2000/svg" ><path opacity=".5" d="M.94 10.94a1.5 1.5 0 000 2.12l9.545 9.547a1.5 1.5 0 102.122-2.122L4.12 12l8.486-8.485a1.5 1.5 0 10-2.122-2.122L.94 10.94zM42 10.5H2v3h40v-3z" fill="#000" /></svg>
+          </button>
+          <button
+            data-target="#trainer-list"
+            data-direction="right"
+            class="trainers-list-controls__button _right"
+          >
+            <svg width="42" height="24" xmlns="http://www.w3.org/2000/svg" ><path opacity=".5" d="M.94 10.94a1.5 1.5 0 000 2.12l9.545 9.547a1.5 1.5 0 102.122-2.122L4.12 12l8.486-8.485a1.5 1.5 0 10-2.122-2.122L.94 10.94zM42 10.5H2v3h40v-3z" fill="#000" /></svg>
+          </button>
+        </div>
 
-        <ul class="trainers-list row">
+        <ul
+          id="trainer-list"
+          class="trainers-list row"
+        >
           {{#each_in_range 0 3 list}}
           <li class="col-4 col-xs-12 col-sm-6 trainer-item">
             <img
-            src="{{this.photo}}"
-            alt="{{this.name}}"
-            class="trainer-item__avatar"
+              src="{{this.photo}}"
+              alt="{{this.name}}"
+              class="trainer-item__avatar"
             >
             <h5 class="trainer-item__name">{{this.name}}</h5>
             <ul class="trainer-item__skills">
@@ -95,8 +131,8 @@
               {{/each}}
             </ul>
             <a
-            href="{{this.schedule}}"
-            class="trainer-item__schedule"
+              href="{{this.schedule}}"
+              class="trainer-item__schedule"
             >РАСПИСАНИЕ →</a>
           </li>
           {{/each_in_range}}

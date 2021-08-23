@@ -49,4 +49,25 @@
     font-size: 20px;
     color: $color-gray;
   }
+
+  @media (max-width: $screen-sm-max) {
+    .text-field__input {
+      padding: 0 0 4px 0;
+      font-size: 20px;
+
+      &:placeholder-shown {
+        border-color: $color-accent;
+
+        ~.text-field__label {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .text-field__label,
+    .text-field__input:focus~.text-field__label {
+      color: $color-black;
+      font-size: 12px;
+    }
+  }
 }

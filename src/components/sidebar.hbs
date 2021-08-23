@@ -1,8 +1,7 @@
-{{#with header}}
 <button
   id="menu-button"
   type="button"
-  class="sidebar__button hamburger hamburger--spring"
+  class="sidebar__button hamburger hamburger--spring {{variant}}"
   aria-label="Menu"
   aria-controls="navigation"
 >
@@ -11,6 +10,7 @@
   </span>
 </button>
 
+{{#with header}}
 <aside id="sidebar" class="sidebar">
   <div class="sidebar__content">
     <ul class="sidebar-menu">
@@ -22,7 +22,21 @@
         >{{this.text}}</a>
       </li>
       {{/each}}
+      <li class="sidebar-menu__item-link _social">
+        <a href="">{{> icon-inst}}</a>
+        <a href="">{{> icon-fb}}</a>
+      </li>
     </ul>
+  </div>
+
+  <div class="sidebar__right-panel">
+    <div class="sidebar__avatar">
+      <img src="/src/images/header_avatar.png" class="sidebar__image" >
+    </div>
+    <a
+      href=""
+      class="sidebar__personal-link"
+    >Личный кабинет</a>
   </div>
 </aside>
 {{/with}}

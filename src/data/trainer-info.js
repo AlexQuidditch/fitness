@@ -1,7 +1,7 @@
 export const trainerInfo = {
   name: 'Денис Беляков',
   grade: 'Мастер',
-  photo: '/src/images/belyakov.png',
+  photo: '/src/images/belyakov.jpg',
   skills: [
     'персональные тренировки',
     'восстановление и реабилитация',

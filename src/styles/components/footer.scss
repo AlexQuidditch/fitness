@@ -38,6 +38,12 @@
 
   &__social-link {
     margin-right: 10px;
+    font-size: 0;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
 
     &:hover {
       svg { fill: $color-white; }

@@ -3,6 +3,7 @@ import 'normalize.css/normalize.css'
 import '../styles/style.scss'
 
 import { useGallery } from './gallery'
+import { useScrollBy } from './scroll'
 import { useSchedule } from './schedule'
 
 const app = document.querySelector<HTMLDivElement>('#app')
@@ -52,16 +53,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
   useGallery('#hero-gallery')
 
-  const $el = document.getElementById('menu-button')
+  const $menuButton = document.getElementById('menu-button')
   const $sidebarEl = document.getElementById('sidebar')
 
-  if (!$el) { return }
+  if (!$menuButton) { return }
 
-  $el.addEventListener('click', e => {
+  $menuButton.addEventListener('click', e => {
     e.preventDefault()
-    if (!$el || !$sidebarEl) { return }
-    $el.classList.toggle('is-active')
+    if (!$menuButton || !$sidebarEl) { return }
+    $menuButton.classList.toggle('is-active')
     $sidebarEl.classList.toggle('_active')
     document.documentElement.classList.toggle('_no-scroll')
   })
+
+  const scrollButtons = Array.from(document.querySelectorAll('.trainers-list-controls__button'))
+
+  scrollButtons.forEach(button => {
+    const target = button.getAttribute('data-target')
+    const direction = button.getAttribute('data-direction')
+    if (!target || !direction) { return }
+
+    button.addEventListener('click', e => {
+      const $target = document.querySelector(target)
+      if (!$target) { return }
+      useScrollBy($target, { left: direction === 'right' ? 100 : -100 })
+    })
+  })
+
+  Array
+    .from(document.querySelectorAll('a.tooltip-container'))
+    .forEach(el => el.addEventListener('click', e => e.preventDefault()))
 })
