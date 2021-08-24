@@ -42,24 +42,24 @@
 
   border-collapse: collapse;
 
-  &._mobile,
-  &._tablet {
-    display: none;
-  }
+  // &._mobile,
+  // &._tablet {
+  //   display: none;
+  // }
 
-  @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-    display: none;
-    &._tablet {
-      display: table;
-    }
-  }
+  // @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+  //   display: none;
+  //   &._tablet {
+  //     display: table;
+  //   }
+  // }
 
-  @media (max-width: $screen-xs-max) {
-    display: none;
-    &._mobile {
-      display: table;
-    }
-  }
+  // @media (max-width: $screen-xs-max) {
+  //   display: none;
+  //   &._mobile {
+  //     display: table;
+  //   }
+  // }
 
   &__header {
     tr {
@@ -85,6 +85,28 @@
         &:nth-child(odd) {
           span {
             background-color: rgba($color-accent, .6);
+          }
+        }
+
+        @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+          display: none;
+
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:last-child {
+            display: table-cell;
+          }
+        }
+
+        @media (max-width: $screen-xs-max) {
+          display: none;
+
+          &:nth-child(1),
+          &:nth-child(2),
+          &:last-child {
+            display: table-cell;
           }
         }
 
@@ -123,7 +145,7 @@
         text-align: center;
 
         &:first-child {
-          padding-top: 30px;
+          padding: 30px 0;
           text-align: right;
           vertical-align: top;
           font-family: $font-family-bold;
@@ -139,6 +161,28 @@
 
         &:last-child {
           text-align: left;
+        }
+
+        @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
+          display: none;
+
+          &:nth-child(1),
+          &:nth-child(2),
+          &:nth-child(3),
+          &:nth-child(4),
+          &:last-child {
+            display: table-cell;
+          }
+        }
+
+        @media (max-width: $screen-xs-max) {
+          display: none;
+
+          &:nth-child(1),
+          &:nth-child(2),
+          &:last-child {
+            display: table-cell;
+          }
         }
       }
     }

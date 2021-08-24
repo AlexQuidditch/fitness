@@ -50,10 +50,6 @@
 
       border: solid 30px #B4E0E7;
       border-radius: 50%;
-
-      @media (max-width: $screen-xs-max) {
-        padding-top: 210px;
-      }
     }
 
     span {
@@ -88,6 +84,8 @@
     }
 
     @media (max-width: $screen-xs-max) {
+      width: 280px;
+
       span {
         width: 80px;
         height: 80px;
@@ -239,7 +237,7 @@
     padding: 0 20px;
   }
 
-  > .trainer-about__subtitle {
+  >.trainer-about__subtitle {
     margin-top: 60px;
   }
 
