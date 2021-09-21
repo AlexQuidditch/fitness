@@ -1,0 +1,73 @@
+<div
+  data-dialog="sign-in-dialog"
+  class="modal-dialog-wrapper"
+>
+  <div class="modal-overlay"></div>
+  <div class="modal-dialog">
+    <header class="modal-dialog__header">
+      <h4 class="modal-dialog__header-title">АВТОРИЗАЦИЯ</h4>
+      <button
+        data-dialog-action="close"
+        class="modal-dialog__header-close"
+      >
+        <img
+          src="/src/images/close_icon.png"
+          alt=""
+        >
+      </button>
+    </header>
+    <div class="modal-dialog__content">
+      <form
+        id="sign-in-form"
+        class="auth-form"
+      >
+        <label
+          for="sign-in-form-email"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-in-form-email"
+            name="password"
+            placeholder="E-MAIL"
+            type="email"
+            required
+            class="auth-form__input _invalid"
+          >
+          <span class="auth-form__error-message">вы не зарегистрированы</span>
+        </label>
+        <label
+          for="sign-in-form-password"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-in-form-password"
+            name="password"
+            placeholder="ПАРОЛЬ"
+            type="password"
+            required
+            class="auth-form__input"
+          >
+          <span class="auth-form__error-message">вы не зарегистрированы</span>
+        </label>
+        <div class="auth-form__actions">
+          <div class="spacer"></div>
+          <a
+            href=""
+            class="auth-form__link"
+          >ЗАБЫЛИ ПАРОЛЬ?</a>
+        </div>
+        <div class="auth-form__actions">
+          <button
+            type="submit"
+            class="auth-form__button _login"
+          >ВОЙТИ</button>
+          <button
+            data-target-dialog="sign-up-dialog"
+            type="button"
+            class="auth-form__button _sign-up"
+          >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

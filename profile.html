@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="favicon.svg"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>СЕКЦИЯ</title>
+</head>
+
+<body>
+  <div
+    id="app"
+    class="wrapper trainers-page"
+  >
+    {{> header }}
+
+    {{> sidebar }}
+
+    {{> profile-view }}
+
+    {{> schedule-private }}
+
+    <section class="schedule _white section">
+      <div class="container">
+        <h3 class="schedule__title">КУПИТЬ ТРЕНИРОВКУ</h3>
+
+        {{#with schedule}}
+        <ul class="options-list">
+          {{#each options}}
+          <li class="options-item">
+            <input
+              type="checkbox"
+              name="options"
+              id="{{this.value}}"
+              value="{{this.value}}"
+              class="options-item__checkbox"
+            >
+            <label
+              for="{{this.value}}"
+              class="options-item__label"
+            >
+              <span>{{this.text}}</span>
+            </label>
+          </li>
+          {{/each}}
+        </ul>
+        {{/with}}
+
+        {{> schedule-view }}
+      </div>
+    </section>
+
+    {{> footer }}
+
+    {{> charge-workout-dialog }}
+
+    {{> edit-profile-dialog }}
+  </div>
+  <script
+    type="module"
+    src="/src/scripts/main.ts"
+  ></script>
+</body>
+
+</html>

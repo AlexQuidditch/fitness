@@ -1,0 +1,211 @@
+<div
+  data-dialog="edit-profile-dialog"
+  class="modal-dialog-wrapper _accent"
+>
+  <div class="modal-overlay"></div>
+  <div class="modal-dialog _accent _profile">
+    <div class="user-profile">
+      <img
+        src="/src/images/belyakov.jpg"
+        alt=""
+        class="user-profile__avatar"
+      >
+      <button
+        data-dialog-action="close"
+        class="user-profile__avatar-close"
+      >
+        <svg width="29" height="30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 13.586a2 2 0 0 0 0 2.828l12.728 12.728a2 2 0 1 0 2.828-2.828L16.828 15 28.142 3.686A2 2 0 1 0 25.314.858L12.586 13.586Zm3.828 2.828a2 2 0 0 0 0-2.828L3.686.858A2 2 0 1 0 .858 3.686L12.172 15 .858 26.314a2 2 0 1 0 2.828 2.828l12.728-12.728ZM14 17h1v-4h-1v4Z" fill="#fff"/></svg>
+      </button>
+    </div>
+    <header class="modal-dialog__header">
+      <h4 class="modal-dialog__header-title">РЕДАКТИРОВАНИЕ ПРОФИЛЯ</h4>
+    </header>
+    <div class="modal-dialog__content">
+      <form
+        id="sign-up"
+        class="auth-form"
+      >
+        <label
+          for="sign-up-email"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-email"
+            name="email"
+            placeholder="E-MAIL"
+            type="email"
+            required
+            class="auth-form__input"
+          >
+          <button
+            type="button"
+            class="auth-form__input-reset"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L8.414 8l5.657-5.657A1 1 0 0012.657.93L6.293 7.293zm2.414 1.414a1 1 0 000-1.414L2.343.929A1 1 0 00.93 2.343L6.586 8 .929 13.657a1 1 0 101.414 1.414l6.364-6.364zM7 9h1V7H7v2z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </label>
+        <label
+          for="sign-up-password"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-password"
+            name="password"
+            placeholder="ПАРОЛЬ"
+            type="password"
+            required
+            class="auth-form__input"
+          >
+          <button
+            type="button"
+            class="auth-form__input-reset"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L8.414 8l5.657-5.657A1 1 0 0012.657.93L6.293 7.293zm2.414 1.414a1 1 0 000-1.414L2.343.929A1 1 0 00.93 2.343L6.586 8 .929 13.657a1 1 0 101.414 1.414l6.364-6.364zM7 9h1V7H7v2z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </label>
+        <label
+          for="sign-up-first-name"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-first-name"
+            name="first_name"
+            placeholder="ВАШЕ ИМЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+          <button
+            type="button"
+            class="auth-form__input-reset"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L8.414 8l5.657-5.657A1 1 0 0012.657.93L6.293 7.293zm2.414 1.414a1 1 0 000-1.414L2.343.929A1 1 0 00.93 2.343L6.586 8 .929 13.657a1 1 0 101.414 1.414l6.364-6.364zM7 9h1V7H7v2z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </label>
+        <label
+          for="sign-up-last-name"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-last-name"
+            name="last_name"
+            placeholder="ФАМИЛИЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+          <button
+            type="button"
+            class="auth-form__input-reset"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L8.414 8l5.657-5.657A1 1 0 0012.657.93L6.293 7.293zm2.414 1.414a1 1 0 000-1.414L2.343.929A1 1 0 00.93 2.343L6.586 8 .929 13.657a1 1 0 101.414 1.414l6.364-6.364zM7 9h1V7H7v2z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </label>
+        <label
+          for="sign-up-birthday"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-birthday"
+            name="birthday"
+            placeholder="ДАТА РОЖДЕНИЯ"
+            type="text"
+            requiredt
+            masked
+            class="auth-form__input"
+          >
+          <button
+            type="button"
+            class="auth-form__input-reset"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L8.414 8l5.657-5.657A1 1 0 0012.657.93L6.293 7.293zm2.414 1.414a1 1 0 000-1.414L2.343.929A1 1 0 00.93 2.343L6.586 8 .929 13.657a1 1 0 101.414 1.414l6.364-6.364zM7 9h1V7H7v2z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </label>
+        <label
+          for="sign-up-phone"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-phone"
+            name="phone"
+            placeholder="НОМЕР ТЕЛЕФОНА"
+            type="tel"
+            required
+            masked
+            class="auth-form__input"
+          >
+          <button
+            type="button"
+            class="auth-form__input-reset"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.293 7.293a1 1 0 000 1.414l6.364 6.364a1 1 0 001.414-1.414L8.414 8l5.657-5.657A1 1 0 0012.657.93L6.293 7.293zm2.414 1.414a1 1 0 000-1.414L2.343.929A1 1 0 00.93 2.343L6.586 8 .929 13.657a1 1 0 101.414 1.414l6.364-6.364zM7 9h1V7H7v2z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </label>
+        <button
+          class="auth-form__button _sign-up _full"
+          type="submit"
+        >СОХРАНИТЬ ИЗМЕНЕНИЯ</button>
+      </form>
+    </div>
+  </div>
+</div>

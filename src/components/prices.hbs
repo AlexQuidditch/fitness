@@ -1,6 +1,6 @@
 {{#with priceItem}}
 <section class="prices section">
-  <h3 class="prices__title">{{title}}</h3>
+  <h3 class="prices__title">{{category}}</h3>
   <div class="container">
     <ul class="row prices-list">
       {{#each items}}
@@ -14,6 +14,10 @@
             РУБЛЕЙ
           </span>
           <a
+            data-charge-dialog="charge-balance-dialog"
+            data-group-title="{{this.category}}"
+            data-item-title="{{this.title}}"
+            data-item-price="{{this.price.current}}"
             href=""
             class="prices-list__item-button"
           >КУПИТЬ</a>

@@ -1,0 +1,47 @@
+<div
+  data-dialog="charge-workout-dialog"
+  class="modal-dialog-wrapper"
+>
+  <div class="modal-overlay"></div>
+  <div class="modal-dialog _rounded _accent _centered">
+    <header class="modal-dialog__header">
+      <h4 class="modal-dialog__header-title">КУПИТЬ ТРЕНИРОВКУ</h4>
+      <ul class="modal-dialog__category-title">
+        <li>
+          <span>ТИП:</span>
+          <span class="value">Chest, back & core</span>
+        </li>
+        <li>
+          <span>ТРЕНЕР:</span>
+          <span class="value">Иван Иванкин</span>
+        </li>
+        <li>
+          <span>ДАТА И ВРЕМЯ:</span>
+          <span class="value">12 сентября 2021 — 13:30</span>
+        </li>
+      </ul>
+      <button
+        data-dialog-action="close"
+        class="modal-dialog__header-close"
+      >
+        <img
+          src="/src/images/close_icon.png"
+          alt=""
+        >
+      </button>
+    </header>
+    <div class="modal-dialog__content">
+      <form
+        id="workout-form"
+        class="charge-form"
+      >
+        <h3 class="charge-form__price">с баланса спишется 1 тренировка</h3>
+        <button
+          type="button"
+          class="charge-form__submit-button"
+        >КУПИТЬ
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

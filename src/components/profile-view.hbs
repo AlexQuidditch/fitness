@@ -1,0 +1,54 @@
+<section
+  id="profile-view"
+  class="profile-view"
+>
+  <div class="container column _align-center">
+    <div class="user-profile">
+      <img
+        src="/src/images/belyakov.jpg"
+        alt=""
+        class="user-profile__avatar"
+      >
+      <button
+        type="button"
+        data-target-dialog="edit-profile-dialog"
+        class="user-profile__edit-button"
+      >ИЗМЕНИТЬ ЛИЧНЫЕ ДАННЫЕ</button>
+    </div>
+
+    <h1 class="profile-view__title">ИВАНИС ИВАНОВКИН</h1>
+
+    <div class="billing">
+      <div class="billing-widget _subscription">
+        <span class="billing-widget__title">ЕСТЬ АБОНЕМЕНТ</span>
+        <table class="billing-widget__table">
+          <tbody>
+            <tr>
+              <th>осталось 38 дней</th>
+              <th>до 30 октября 2021</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="billing-widget _balance">
+        <span class="billing-widget__title">БАЛАНС</span>
+        <span class="billing-widget__value">0 ТРЕНИРОВОК</span>
+        <table class="billing-widget__table">
+          <tbody>
+            <tr>
+              <th>12 тренировок</th>
+              <th>категория: Групповые и самостоятельные тренировки</th>
+            </tr>
+          </tbody>
+        </table>
+        <a
+          {{!--
+          href="/prices.html"
+          --}}
+          data-target-dialog="charge-workout-dialog"
+          class="billing-widget__charge-button"
+        >ПОПОЛНИТЬ БАЛАНС</a>
+      </div>
+    </div>
+  </div>
+</section>

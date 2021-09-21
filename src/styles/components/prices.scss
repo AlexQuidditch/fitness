@@ -134,7 +134,7 @@
       font-size: 30px;
       line-height: 0.9;
 
-      background-color: #F58181;
+      background-color: $color-red;
 
       transform: translate(25%, -25%);
       user-select: none;
@@ -210,7 +210,7 @@
       @media (max-width: $screen-sm-max) {
         right: auto;
         left: 50%;
-        background-color: #F58181;
+        background-color: $color-red;
         transform: translateX(-50%);
       }
     }

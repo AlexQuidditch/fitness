@@ -18,7 +18,7 @@ html {
   overflow-x: hidden;
   font-size: 14px;
   box-sizing: border-box;
-
+  touch-action: manipulation;
   scroll-behavior: smooth;
 
   -webkit-tap-highlight-color: transparent;
@@ -39,6 +39,10 @@ body {
   &._no-scroll {
     overflow-y: hidden;
   }
+}
+
+a, button {
+  cursor: pointer;
 }
 
 .wrapper {
@@ -241,8 +245,11 @@ body {
 @import './components/contacts';
 @import './components/feedback';
 @import './components/prices';
+@import './components/auth-form';
 @import './components/promotion-list';
 @import './components/trainer-info';
+@import './components/profile-view';
+@import './components/charge-form';
 
 @import './pages/trainers';
 @import './pages/faq';
@@ -255,5 +262,6 @@ body {
 @import './widgets/text-field';
 @import './widgets/tooltip';
 @import './widgets/accordion';
+@import './widgets/modal-dialog';
 
 @import './overrides';

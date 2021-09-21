@@ -1,0 +1,137 @@
+<div
+  data-dialog="sign-up-dialog"
+  class="modal-dialog-wrapper"
+>
+  <div class="modal-overlay"></div>
+  <div class="modal-dialog">
+    <header class="modal-dialog__header">
+      <h4 class="modal-dialog__header-title">РЕГИСТРАЦИЯ</h4>
+      <button
+        data-dialog-action="close"
+        class="modal-dialog__header-close"
+      >
+        <img
+          src="/src/images/close_icon.png"
+          alt=""
+        >
+      </button>
+    </header>
+    <div class="modal-dialog__content _mb-xs">
+      <form
+        id="sign-up"
+        class="auth-form"
+      >
+        <label
+          for="sign-up-email"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-email"
+            name="email"
+            placeholder="E-MAIL"
+            type="email"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-password"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-password"
+            name="password"
+            placeholder="ПАРОЛЬ"
+            type="password"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-first-name"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-first-name"
+            name="first_name"
+            placeholder="ВАШЕ ИМЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-last-name"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-last-name"
+            name="last_name"
+            placeholder="ФАМИЛИЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-birthday"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-birthday"
+            name="birthday"
+            placeholder="ДАТА РОЖДЕНИЯ"
+            type="text"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <label
+          for="sign-up-phone"
+          class="auth-form__label"
+        >
+          <input
+            id="sign-up-phone"
+            name="phone"
+            placeholder="НОМЕР ТЕЛЕФОНА"
+            type="tel"
+            required
+            class="auth-form__input"
+          >
+        </label>
+        <input
+          type="checkbox"
+          id="sign-up-rules"
+          name="rules"
+          value="true"
+          required
+          class="auth-form__checkbox"
+        >
+        <label
+          for="sign-up-rules"
+          class="auth-form__label"
+        >Я ознакомился и согласен с правилами студии
+        </label>
+        <input
+          id="sign-up-confidential"
+          type="checkbox"
+          name="confidential"
+          value="true"
+          required
+          class="auth-form__checkbox"
+        >
+        <label
+          for="sign-up-confidential"
+          class="auth-form__label"
+        >Я согласен с политикой конфиденциальности
+        </label>
+        <div class="auth-form__actions">
+          <button
+            type="submit"
+            class="auth-form__button _sign-up _full"
+          >ЗАРЕГИСТРИРОВАТЬСЯ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

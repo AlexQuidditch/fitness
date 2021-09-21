@@ -24,12 +24,18 @@
       {{/each}}
     </ul>
     <div class="header-avatar">
-      <img
-        src="/src/images/header_avatar.png"
-        class="header-avatar__image"
-      >
+      <a href="/profile.html">
+        <img
+          src="/src/images/header_avatar.png"
+          class="header-avatar__image"
+        >
+      </a>
     </div>
-    <a href="" class="header-menu__item-link _vertical">Личный кабинет</a>
+    <a
+      data-target-dialog="sign-in-dialog"
+      href=""
+      class="header-menu__item-link _vertical"
+    >Личный кабинет</a>
   </div>
 
 </header>

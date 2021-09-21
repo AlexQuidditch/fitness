@@ -2,9 +2,8 @@ import 'normalize.css/normalize.css'
 
 import '../styles/style.scss'
 
-import { useGallery } from './gallery'
-import { useScrollBy } from './scroll'
-import { useSchedule } from './schedule'
+import { useGallery, initSlidersBySelectorList } from './gallery'
+import { closeDialogs, setTextFieldError, useCloseDialog, useToggleDialog, resetTextField, initMaskedTextFields, useChargeDialog, initCleanTextFieldButtons } from './dialogs'
 
 const app = document.querySelector<HTMLDivElement>('#app')
 
@@ -66,21 +65,53 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.classList.toggle('_no-scroll')
   })
 
-  const scrollButtons = Array.from(document.querySelectorAll('.trainers-list-controls__button'))
+  initSlidersBySelectorList([
+    '.trainers-list-controls__button',
+  ])
 
-  scrollButtons.forEach(button => {
-    const target = button.getAttribute('data-target')
-    const direction = button.getAttribute('data-direction')
-    if (!target || !direction) { return }
-
-    button.addEventListener('click', e => {
-      const $target = document.querySelector(target)
-      if (!$target) { return }
-      useScrollBy($target, { left: direction === 'right' ? 100 : -100 })
-    })
+  document.addEventListener('keydown', e => {
+    const isEsc = e.key.toLowerCase() === 'escape'
+    if (!isEsc) { return }
+    closeDialogs()
   })
+
+  initMaskedTextFields(
+    'input[name=birthday]',
+    {
+      mask: Date,
+      min: new Date(1920, 0, 1),
+      max: new Date(2020, 0, 1),
+      lazy: false
+    }
+  )
+
+  initCleanTextFieldButtons()
+
+  initMaskedTextFields(
+    'input[type=tel]',
+    { mask: '+{7} (000) 000-00-00' }
+  )
+
+  Array
+    .from(document.querySelectorAll('[data-target-dialog]'))
+    .forEach(useToggleDialog)
+
+  Array
+    .from(document.querySelectorAll('[data-charge-dialog]'))
+    .forEach(useChargeDialog)
+
+  Array
+    .from(document.querySelectorAll('[data-dialog-action=close]'))
+    .forEach(useCloseDialog)
 
   Array
     .from(document.querySelectorAll('a.tooltip-container'))
     .forEach(el => el.addEventListener('click', e => e.preventDefault()))
 })
+
+// @ts-ignore
+window.setTextFieldError = setTextFieldError
+// @ts-ignore
+window.resetTextField = resetTextField
+// @ts-ignore
+window.useChargeDialog = useChargeDialog

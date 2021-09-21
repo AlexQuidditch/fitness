@@ -5,6 +5,30 @@
   padding-bottom: 90px;
   background-color: rgba($color-gray, .1);
 
+  &._white {
+    background-color: $color-white;
+  }
+
+  &._private {
+    padding-top: 45px;
+    background-color: $color-accent;
+
+    .schedule__title {
+      font-size: 50px;
+      color: $color-white;
+
+      &._private {
+        font-size: 80px;
+      }
+
+      span {
+        margin-top: 12px;
+        display: block;
+        color: $color-black;
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 30px;
 
@@ -20,6 +44,30 @@
 
     &._accent {
       color: $color-accent;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: 260px;
+    padding: 15px 0 10px 0;
+    margin: 0 auto 45px auto ;
+
+    font-family: $font-family-bold;
+    font-size: 25px;
+    line-height: 25px;
+
+    color: $color-black;
+    background-color: $color-white;
+
+    cursor: pointer;
+    border-radius: 100px;
+
+    transition:
+      background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($color-white, 10);
     }
   }
 
@@ -42,24 +90,43 @@
 
   border-collapse: collapse;
 
-  // &._mobile,
-  // &._tablet {
-  //   display: none;
-  // }
+  &._secondary {
+    .schedule-view__header tr th {
+      span {
+        color: $color-black;
+        background-color: $color-white;
+      }
 
-  // @media (min-width: $screen-xs-max) and (max-width: $screen-sm-max) {
-  //   display: none;
-  //   &._tablet {
-  //     display: table;
-  //   }
-  // }
+      &:nth-child(odd) {
+        span {
+          background-color: #DEDEDE;
+        }
+      }
+    }
 
-  // @media (max-width: $screen-xs-max) {
-  //   display: none;
-  //   &._mobile {
-  //     display: table;
-  //   }
-  // }
+    .schedule-view__body {
+      tr td {
+        &:not(:last-child) {
+          border-bottom: 2px solid rgba($color-white, .5);
+        }
+        &:nth-child(odd) {
+          .schedule-event__title {
+            background-color: $color-black;
+          }
+        }
+      }
+    }
+
+    .schedule-event {
+      &__title {
+        background-color: $color-black;
+      }
+
+      &__trainer {
+        background-color: $color-white;
+      }
+    }
+  }
 
   &__header {
     tr {
@@ -147,7 +214,6 @@
         &:first-child {
           padding: 30px 0;
           text-align: right;
-          vertical-align: top;
           font-family: $font-family-bold;
           font-size: 20px;
           line-height: 1;
@@ -239,7 +305,7 @@
   .options-item {
     user-select: none;
 
-    &__checkbox:checked ~ .options-item__label {
+    &__checkbox:checked~.options-item__label {
       border-color: $color-accent;
       background-color: $color-accent;
     }

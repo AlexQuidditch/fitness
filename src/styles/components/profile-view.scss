@@ -1,0 +1,166 @@
+@import '../variables';
+
+.profile-view {
+  padding-top: 85px;
+
+  &__title {
+    margin-bottom: 15px;
+
+    font-family: $font-family-bold;
+    font-style: normal;
+    font-size: 100px;
+    line-height: 1;
+
+    text-align: center;
+
+    color: $color-black;
+
+    span {
+      color: $color-accent;
+    }
+
+    @media (max-width: $screen-xs-max) {
+      font-size: 50px;
+      padding: 0 20px;
+    }
+  }
+}
+
+.user-profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 35px;
+
+  &__avatar {
+    width: 190px;
+    height: 190px;
+    border: solid 15px $color-accent;
+    border-radius: 50%;
+  }
+
+  &__avatar-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    width: 190px;
+    height: 190px;
+
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: rgba($color-accent, 0.8);
+  }
+
+  &__edit-button {
+    width: 300px;
+    padding: 15px 0 10px 0;
+    margin-top: -40px;
+
+    font-family: $font-family-bold;
+    font-size: 25px;
+    line-height: 1;
+
+    color: rgba($color-black, .5);
+    background-color: $color-gray;
+
+    transition:
+      background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($color-gray, 5);
+    }
+  }
+}
+
+.billing {
+  width: 640px;
+  margin-bottom: 85px;
+
+  color: $color-white;
+
+  font-family: $font-family-bold;
+  font-size: 60px;
+  line-height: 50px;
+  text-align: center;
+  background-color: $color-black;
+
+  border-radius: 60px;
+}
+
+.billing-widget {
+  position: relative;
+  padding: 44px 30px 0 30px;
+  border-radius: inherit;
+
+  &._subscription {
+    .billing-widget__table {
+      margin-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &._balance {
+    padding-bottom: 32px;
+    background-color: $color-accent;
+  }
+
+  &__table {
+    width: 100%;
+    margin: 30px 0;
+
+    font-size: 25px;
+    line-height: 1;
+    border-collapse: collapse;
+    border-bottom: 1px solid $color-white;
+
+    tbody tr {
+      height: 65px;
+      border-top: 1px solid $color-white;
+
+      th,
+      td {
+        font-size: 20px;
+        text-align: right;
+
+        &:first-child {
+          text-align: left;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  &__value {
+    color: $color-black;
+  }
+
+  &__charge-button {
+    position: absolute;
+    width: 260px;
+    padding: 15px 0 10px 0;
+    left: 50%;
+    bottom: -25px;
+
+    font-size: 25px;
+    line-height: 25px;
+
+    color: $color-white;
+    background-color: $color-red;
+
+    cursor: pointer;
+    border-radius: 100px;
+    transform: translateX(-50%);
+
+    transition:
+      background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: lighten($color-red, 5);
+    }
+  }
+}

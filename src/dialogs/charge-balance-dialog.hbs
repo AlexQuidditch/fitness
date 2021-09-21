@@ -1,0 +1,41 @@
+<div
+  data-dialog="charge-balance-dialog"
+  class="modal-dialog-wrapper"
+>
+  <div class="modal-overlay"></div>
+  <div class="modal-dialog _rounded _accent">
+    <header class="modal-dialog__header">
+      <h4 class="modal-dialog__header-title">ПОПОЛНИТЬ БАЛАНС</h4>
+      <p data-charge-target="group-title" class="modal-dialog__item-title"></p>
+      <p class="modal-dialog__category-title">
+        <span>КАТЕГОРИЯ:</span>
+        <span data-charge-target="item-title" class="value"></span>
+      </p>
+      <button
+        data-dialog-action="close"
+        class="modal-dialog__header-close"
+      >
+        <img
+          src="/src/images/close_icon.png"
+          alt=""
+        >
+      </button>
+    </header>
+    <div class="modal-dialog__content">
+      <form
+        id="charge-form"
+        class="charge-form"
+      >
+        <h3
+          data-charge-target="item-price"
+          class="charge-form__price"
+        ></h3>
+        <button
+          type="button"
+          class="charge-form__submit-button"
+        >ОПЛАТИТЬ
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

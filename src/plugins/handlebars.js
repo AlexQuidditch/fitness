@@ -20,9 +20,12 @@ import { trainerInfo } from '../data/trainer-info';
 
 export default handlebars({
   context: { hero, header, bootcamp, functional, fightings, bodyMind, personal, trainers, promotions, trainerInfo, news, schedule, services, prices, faqList, footer },
-  partialDirectory: resolve(__dirname, '../components'),
+  partialDirectory: [
+    resolve(__dirname, '../dialogs'),
+    resolve(__dirname, '../components')
+  ],
   helpers: {
-    if_even: function(conditional, options) {
+    if_even (conditional, options) {
       return (conditional % 2) == 0 ? options.fn(this) : options.inverse(this);
     },
     each_in_range: (from, to, context, options) => {
@@ -32,10 +35,7 @@ export default handlebars({
       }
       return item;
     },
-    splice_of: (v, idx) => {
-      console.log({ v, idx });
-      return v.splice(0, idx)
-    },
+    splice_of: (v, idx) => v.splice(0, idx),
     get_length: v => v.length,
     json: v => JSON.stringify(v),
     math: (lvalue, operator, rvalue) => {
