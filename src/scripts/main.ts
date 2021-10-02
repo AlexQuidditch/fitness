@@ -1,9 +1,11 @@
 import 'normalize.css/normalize.css'
+import 'choices.js/public/assets/styles/choices.min.css';
 
 import '../styles/style.scss'
 
 import { useGallery, initSlidersBySelectorList } from './gallery'
 import { closeDialogs, setTextFieldError, useCloseDialog, useToggleDialog, resetTextField, initMaskedTextFields, useChargeDialog, initCleanTextFieldButtons } from './dialogs'
+import { useSelect } from './selects';
 
 const app = document.querySelector<HTMLDivElement>('#app')
 
@@ -91,6 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
     'input[type=tel]',
     { mask: '+{7} (000) 000-00-00' }
   )
+
+  useSelect('.custom-selector')
 
   Array
     .from(document.querySelectorAll('[data-target-dialog]'))
