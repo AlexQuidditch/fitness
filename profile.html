@@ -32,6 +32,22 @@
       <div class="container">
         <h3 class="schedule__title">КУПИТЬ ТРЕНИРОВКУ</h3>
 
+        {{#with trainers}}
+        <div class="flex-row _align-center _justify-content-center">
+          <span class="select-prefix">Тренер:</span>
+          <select
+            id="choices-multiple-remove-button"
+            placeholder="Select upto 5 tags"
+            class="custom-selector"
+          >
+            <option value="all">ВСЕ</option>
+            {{#each list}}
+            <option value="{{this.name}}" data-photo="{{this.photo}}">{{this.name}}</option>
+            {{/each}}
+          </select>
+          {{/with}}
+        </div>
+
         {{#with schedule}}
         <ul class="options-list">
           {{#each options}}
