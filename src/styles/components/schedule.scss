@@ -19,6 +19,10 @@
 
       &._private {
         font-size: 80px;
+
+        @media (max-width: $screen-sm-max) {
+          font-size: 50px;
+        }
       }
 
       span {
@@ -51,7 +55,7 @@
     display: block;
     width: 260px;
     padding: 15px 0 10px 0;
-    margin: 0 auto 45px auto ;
+    margin: 0 auto 45px auto;
 
     font-family: $font-family-bold;
     font-size: 25px;
@@ -106,9 +110,8 @@
 
     .schedule-view__body {
       tr td {
-        &:not(:last-child) {
-          border-bottom: 2px solid rgba($color-white, .5);
-        }
+        border-bottom: 2px solid rgba($color-white, .5);
+
         &:nth-child(odd) {
           .schedule-event__title {
             background-color: $color-black;

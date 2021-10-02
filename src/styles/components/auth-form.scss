@@ -1,7 +1,12 @@
 @import '../variables';
 
 .auth-form {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
+
+  @media (max-width: $screen-sm-max) {
+    max-width: initial;
+  }
 
   &__label {
     position: relative;
@@ -71,6 +76,15 @@
 
       color: #A5A5A5;
 
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      @media (max-width: $screen-sm-max) {
+        color: $color-white;
+      }
+
       &::before {
         content: '';
         display: inline-block;
@@ -126,6 +140,10 @@
     text-align: center;
 
     color: #A5A5A5;
+
+    @media (max-width: $screen-sm-max) {
+      color: $color-white;
+    }
   }
 
   &__button {
@@ -143,17 +161,24 @@
     transition: opacity .2s ease-in-out;
 
     &._login {
-      width: 80px;
+      width: 100%;
+      max-width: 80px;
       background-color: $color-accent;
+
+      @media (max-width: $screen-sm-max) {
+        color: $color-black;
+        background-color: $color-white;
+      }
     }
 
     &._sign-up {
-      width: 210px;
+      width: 100%;
+      max-width: 210px;
       background-color: $color-red;
 
       &._full {
         margin-top: 20px;
-        width: 100%;
+        max-width: initial;
       }
     }
 

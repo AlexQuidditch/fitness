@@ -9,6 +9,10 @@
     margin-bottom: 24px;
     font-size: 50px;
     line-height: 1;
+
+    @media (max-width: $screen-sm-max) {
+      margin-bottom: 20px;
+    }
   }
 
   &__submit-button {
@@ -29,6 +33,10 @@
 
     &:hover {
       background-color: lighten($color-red, 5);
+    }
+
+    @media (max-width: $screen-sm-max) {
+      width: 100%;
     }
   }
 }
